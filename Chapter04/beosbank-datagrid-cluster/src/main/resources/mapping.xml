@@ -1,0 +1,52 @@
+<beanio xmlns="http://www.beanio.org/2012/03" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+
+  <stream name="MoneyTransferStream" format="xml">
+		<record name="moneytransfer"  minOccurs="0" maxOccurs="unbounded" class="com.beosbank.jbdevg.jbdatagrid.domain.MoneyTransfert">
+        <field name="id" rid="true" />
+        <field name="sendingDate" format="yyyy-MM-dd" />
+        <field name="withdrawalDate" format="yyyy-MM-dd" />
+        <field name="creditCardNumber" />
+        <field name="keyCode" />
+        <field name="amountExcludingFees" />
+        <field name="fees" />
+        <field name="status" />
+        <field name="amountIncludingFees" />
+        <field name="vatRate" />
+        <field name="totalAmountExcludingVat" />
+        <field name="totalAmountIncludingVat" />
+        <field name="senderCurrencyCode" />
+        <field name="receiverCurrencyCode" />
+        <field name="amountExcludingFeesInReceiverCurrency" />
+        
+        <segment name="sender" class="com.beosbank.jbdevg.jbdatagrid.domain.Customer">
+        	<field name="id" />
+        	<field name="birthDate" format="yyyy-MM-dd" />
+        	<field name="firstName" />
+        	<field name="lastName" />
+       		 <segment name="address" class="com.beosbank.jbdevg.jbdatagrid.domain.Address">
+       	 		<field name="street" />
+       		 	<field name="city" />
+       	 		<field name="zipcode" />
+       	 		<field name="country" />
+      		</segment>
+        </segment>
+        
+        <segment name="receiver" class="com.beosbank.jbdevg.jbdatagrid.domain.Customer">
+        	<field name="id" />
+        	<field name="birthDate" format="yyyy-MM-dd" />
+        	<field name="firstName" />
+        	<field name="lastName" />
+       		 <segment name="address" class="com.beosbank.jbdevg.jbdatagrid.domain.Address">
+       	 		<field name="street" />
+       		 	<field name="city" />
+       	 		<field name="zipcode" />
+       	 		<field name="country" />
+      		</segment>
+        </segment>
+        
+      </record>
+      
+  </stream>
+</beanio>

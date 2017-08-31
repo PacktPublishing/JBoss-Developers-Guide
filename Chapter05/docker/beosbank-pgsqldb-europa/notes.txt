@@ -1,0 +1,3 @@
+docker  run --rm  -d -p 6432:5432  -e POSTGRES_USER=root -e POSTGRES_PASSWORD=Europa01# -e POSTGRES_DB=beosbank-europa  postgres
+psql -h localhost -p 6432 -d beosbank-europa -U root  -f ./beosbank-europa.sql
+psql -h localhost -p 6432 -d beosbank-europa -U root

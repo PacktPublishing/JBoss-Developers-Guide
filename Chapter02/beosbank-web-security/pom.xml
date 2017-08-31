@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.beosbank.jbdevg.jbossas</groupId>
+    <artifactId>jbossas</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>beosbank-web-security</artifactId>
+  <packaging>war</packaging>
+  <name>beosbank-web-security</name>
+  <description>BeosBank Money Transfer Web App - Security  Demo</description>  
+
+<url>http://maven.apache.org</url>
+  <dependencies>
+
+
+  <dependency>
+  	<groupId>org.jboss.spec.javax.ejb</groupId>
+  	<artifactId>jboss-ejb-api_3.1_spec</artifactId>
+  	<version>1.0.2.Final</version>
+  	<scope>provided</scope>
+  </dependency>
+  
+ <dependency>
+    <groupId>org.jboss.spec.javax.annotation</groupId>
+    <artifactId>jboss-annotations-api_1.1_spec</artifactId>
+    <version>1.0.1.Final</version>
+    <scope>provided</scope>
+</dependency>
+  
+  <dependency>
+  	<groupId>org.jboss.ejb3</groupId>
+  	<artifactId>jboss-ejb3-ext-api</artifactId>
+  	<version>2.2.0.Final</version>
+  	<scope>provided</scope>
+  </dependency>
+  <dependency>
+  	<groupId>javax.enterprise</groupId>
+  	<artifactId>cdi-api</artifactId>
+  	<version>2.0-PFD</version>
+  	<scope>provided</scope>
+  </dependency>
+  <dependency>
+  	<groupId>org.jboss.spec.javax.servlet</groupId>
+  	<artifactId>jboss-servlet-api_3.1_spec</artifactId>
+  	<version>1.0.0.Final</version>
+  	<scope>provided</scope>
+  </dependency>
+  <dependency>
+  	<groupId>org.jboss.spec.javax.faces</groupId>
+  	<artifactId>jboss-jsf-api_2.1_spec</artifactId>
+  	<version>2.1.29.1.Final</version>
+  	<scope>provided</scope>
+  </dependency>
+  
+  <!-- Wizard component -->
+<dependency>
+    <groupId>org.primefaces</groupId>
+    <artifactId>primefaces</artifactId>
+    <version>6.0</version>
+</dependency>
+
+
+	<!-- JPA -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.2.7.Final</version>
+		</dependency>		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.2.7.Final</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>1.0.0.Final</version>
+		</dependency>
+
+<!-- MySQL -->
+	<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.41</version>
+		</dependency>
+
+	<!-- Log4j2 -->
+	  <dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-api</artifactId>
+	    <version>2.8.1</version>
+	  </dependency>
+	  
+	  <dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-core</artifactId>
+	    <version>2.8.1</version>
+	  </dependency>
+
+  </dependencies>
+  
+  
+  <build>
+  
+  	<plugins>
+            <plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>7.9.Final</version>
+                <configuration>
+                	<hostname>127.0.0.1</hostname>
+                	<port>9999</port>
+                    <domain>
+                        <server-groups>
+                            <server-group>dev01</server-group>
+                        </server-groups>
+                    </domain>
+                </configuration>
+            </plugin>
+        </plugins>
+        
+    <finalName>${project.artifactId}</finalName>
+  </build>
+</project>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+    xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd">
+    <!-- OSGI blueprint property placeholder -->
+    <cm:property-placeholder id="beosbank.placeholder" persistent-id="com.beosbank.esb.env.cfg" update-strategy="reload">
+        <cm:default-properties>
+            <cm:property name="db.databaseName" value="beosbank-africa" />
+            <cm:property name="db.url" value="jdbc:mysql://127.0.0.1:3406/beosbank-africa?relaxAutoCommit=true"/>
+            <cm:property name="db.user" value="root"/>
+            <cm:property name="db.password" value=""/>
+            <cm:property name="datagrid.host.Africa" value="127.0.0.1:11322"/>
+        </cm:default-properties>
+    </cm:property-placeholder>
+    <camelContext id="beosbank-moneytransfert-cacheloader"
+        xmlns="http://camel.apache.org/schema/blueprint" xmlns:order="http://fabric8.com/examples/order/v7">
+        <route customId="true" id="mysqldb-africa-esblistener">
+            <from id="timer1" uri="timer://EsbTimerMinute?fixedRate=true&amp;period=60000"/>
+            <log customId="true" id="logInit" message="Checking new Transactions pwd= {{db.password}}"/>
+            <setBody id="_setBody1">
+                <simple trim="false">SELECT * FROM AF_MONEYTRANSFER WHERE status in ('DRAFT','PAID');</simple>
+            </setBody>
+            <to id="_to1" uri="jdbc:beosbank-africa-mysql-ds"/>
+            <split id="_split1">
+                <simple>${body}</simple>
+                <process id="afProcessorCall" ref="afTrxProcessor"/>
+                <to id="sendToBeosBankCache" uri="infinispan://{{datagrid.host.Africa}}?cacheName=beosbank-dist&amp;command=PUT"/>
+                <log customId="true" id="logAfterCaching" message="New Cache Entry: ${body} "/>
+            </split>
+        </route>
+    </camelContext>
+    <!-- AF Transactions Processor -->
+    <bean
+        class="com.beosbank.jbdevg.jbfuse.cacheloader.processor.AFProcessor" id="afTrxProcessor"/>
+    <!-- MYSQL Data source -->
+    <bean class="com.mysql.jdbc.jdbc2.optional.MysqlDataSource" id="beosbank-africa-mysql-ds">
+        <property name="databaseName" value="${db.databaseName}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="user" value="${db.user}"/>
+        <property name="password" value="${db.password}"/>
+    </bean>
+</blueprint>

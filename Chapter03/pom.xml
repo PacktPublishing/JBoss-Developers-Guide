@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<version>1.0-SNAPSHOT</version>
+	<groupId>com.beosbank.jbdevg.jbdeploy</groupId>
+	<artifactId>jbdeploy</artifactId>
+	<packaging>pom</packaging>
+	<name>ch3-parent</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<undertow.version>2.0.0.Alpha1</undertow.version>
+		<undertow.resteasy.version>3.1.2.Final</undertow.resteasy.version>
+	</properties>
+
+
+	<modules>
+		<module>beosbank-undertow-labs</module>
+		<module>beosbank-undertow-service</module>
+		<module>beosbank-web-swarm</module>
+	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>io.undertow</groupId>
+			<artifactId>undertow-core</artifactId>
+			<version>${undertow.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.undertow</groupId>
+			<artifactId>undertow-servlet</artifactId>
+			<version>${undertow.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.undertow</groupId>
+			<artifactId>undertow-websockets-jsr</artifactId>
+			<version>${undertow.version}</version>
+		</dependency>
+	
+	 <dependency>
+       		 <groupId>junit</groupId>
+        	<artifactId>junit</artifactId>
+       		 <version>4.12</version>
+        	<scope>test</scope>
+      	</dependency>
+	
+	
+	</dependencies>
+	
+	<build>
+	<pluginManagement>
+	<plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.6.0</version>
+      </plugin>
+	</plugins>
+	</pluginManagement>
+	</build>
+	
+	<repositories>
+	<repository>
+      <id>RedHat GA</id>
+      <url>https://maven.repository.redhat.com/ga/</url>
+    </repository>
+	</repositories>
+
+</project>

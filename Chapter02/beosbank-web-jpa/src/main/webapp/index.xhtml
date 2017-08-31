@@ -1,0 +1,96 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+ 
+     <h:head>
+ 
+     </h:head>
+ 
+     <h:body>
+     <div style="width:50%">
+     	<h2>BeosBank Money Transfer Web portal</h2>
+     	
+     	<p>JBoss Instance:<b style="color:blue"> #{mtcStatelessEjb.jbossInstanceName}</b></p>
+     
+ 		<h:form>
+ 		<p:growl id="messages" showDetail="true" sticky="true" /> 
+		<p:wizard id="moneyTransfertWorkflow" flowListener="#{mtvcBean.onFlowProcess}">
+        <p:tab id="transfertTab" title="Transfer Details" >
+            <p:panel header="Transfer Details" >
+                <p:messages />
+                <h:panelGrid columns="3" columnClasses="label,value, value">
+                    
+                    	<p:outputLabel for="senderCountryInput" value="Sender's Country:" />
+        				<p:selectOneMenu id="senderCountryInput" value="#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.sender.address.country}" style="width:125px" >
+          				 	<p:ajax listener="#{mtvcBean.onSenderCountryChanged}" update="amountExcludingFeesInput" />
+          				  <f:selectItem itemLabel="Sending money from" itemValue="" noSelectionOption="true" />
+          				  <f:selectItems value="#{mtvcBean.countries}" />
+                         </p:selectOneMenu>
+                          <h:panelGroup />
+                    
+                    
+                    	<p:outputLabel for="receiverCountryInput" value="Receipient's Country:" />
+        				<p:selectOneMenu id="receiverCountryInput" value="#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.receiver.address.country}" style="width:125px" >
+          				 	<p:ajax listener="#{mtvcBean.onReceipientCountryChanged}" update="amountExcludingFeesInput" />
+          				  <f:selectItem itemLabel="Receiver is based in " itemValue="" noSelectionOption="true" />
+          				  <f:selectItems value="#{mtvcBean.countries}" />
+                         </p:selectOneMenu>
+                    	 <h:panelGroup />
+                    
+                   		<h:outputText value="Amount to send" />
+ 						<p:inputNumber id="amountExcludingFeesInput" value="#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.amountExcludingFees}" symbol="   #{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.senderCurrencyCode}" symbolPosition="s" 
+                               decimalSeparator="," thousandSeparator=".">  
+                		</p:inputNumber>
+                		 <h:panelGroup />
+                		 
+             			
+             			<h:outputText  value="Sender" />
+ 						<p:inputText id="senderInputFirstname" value="#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.sender.firstName}" placeholder="Sender First Name" maxlength="20" />  
+                		<p:inputText id="senderInputLastName" value="#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.sender.lastName}" placeholder="Sender Last Name" maxlength="20"/>  
+                		
+                		
+                		<h:outputText  value="Receiver" />
+ 						<p:inputText id="receiverInputFirstname" value="#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.receiver.firstName}" placeholder="Receiver First Name" maxlength="20"/>  
+                		<p:inputText id="receiverInputLastName" value="#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.receiver.lastName}" placeholder="Receiver Last Name" maxlength="20"/>  
+                
+                </h:panelGrid>
+            </p:panel>
+            
+        </p:tab>
+        
+        <p:tab id="paymentDataTab" title="Payment Infos" >
+         <p:panel header="Payment Infos" >
+         	<br></br>
+        	<h:panelGrid>
+       	 	<p:outputLabel for="creditcard" value="Card Number:" />
+      		  <p:inputMask id="creditcard" value="#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.creditCardNumber}" mask="9999-9999-9999-9999"/>
+           </h:panelGrid>  
+             </p:panel>	
+             <br></br>	 
+		</p:tab> 
+		
+		
+
+		<p:tab id="ConfirmationDataTab" title="Confirmation" >
+			<p:panel header="Payment Infos" >
+	         	<br></br>
+	        	<h:panelGrid columns="2" >
+	        	<p:outputLabel  value="From: ">#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.sender.firstName}  #{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.sender.lastName} (#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.sender.address.country})</p:outputLabel><br></br>
+	       	 	<p:outputLabel  value="To: ">#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.receiver.firstName}  #{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.sender.lastName} (#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.receiver.address.country})</p:outputLabel><br></br>
+	       	 	<p:outputLabel  value="Amout: ">#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.amountExcludingFees}  #{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.senderCurrencyCode}</p:outputLabel><br></br>
+	       	 	<p:outputLabel  value="Card Number: ">#{mtvcBean.moneyTransfertDataFromSessionOrCreateNew.creditCardNumber}</p:outputLabel><br></br>
+	           </h:panelGrid>  
+            </p:panel>	
+             <br></br>	 
+		
+		 <p:commandButton value="Send Money Transfer"   action="#{mtvcBean.sendMoney}" icon="ui-icon-check" update="messages" />
+		</p:tab> 
+       </p:wizard>
+       
+      
+        
+       </h:form>  
+       </div>
+     </h:body>
+</html>

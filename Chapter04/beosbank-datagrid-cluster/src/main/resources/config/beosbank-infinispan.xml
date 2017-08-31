@@ -1,0 +1,10 @@
+<infinispan>
+   <cache-container default-cache="local">
+      <transport cluster="beosbank-cluster"/>
+      <local-cache name="local"/>
+      <replicated-cache name="beosbank-repl" mode="SYNC"/>
+      <distributed-cache name="beosbank-dist" mode="SYNC">
+      	<expiration max-idle="3000" lifespan="5000" />
+      </distributed-cache>
+   </cache-container>
+</infinispan>

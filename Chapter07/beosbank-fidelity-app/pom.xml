@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <parent>
+      <groupId>com.beosbank.jbdevg.jbamq</groupId>
+      <artifactId>jbamq</artifactId>
+      <version>1.0-SNAPSHOT</version>
+   </parent>
+
+   <artifactId>beosbank-fidelity-app</artifactId>
+   <packaging>jar</packaging>
+   <name>Beosbank Fidelity App Manager</name>
+
+   <dependencies>
+      <dependency>
+         <groupId>org.apache.qpid</groupId>
+         <artifactId>qpid-jms-client</artifactId>
+       <version>${qpid.jms.version}</version>
+      </dependency>
+   </dependencies>
+<build>
+<plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <configuration>
+          <mainClass>com.beosbank.jbdevg.jbamq.fidelity.LoyaltyCardManager</mainClass>
+        </configuration>
+      </plugin>
+	</plugins>
+	</build>
+</project>
+

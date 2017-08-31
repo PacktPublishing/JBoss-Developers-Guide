@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.beosbank.jbdevg.jbdeploy</groupId>
+		<artifactId>jbdeploy</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>beosbank-undertow-service</artifactId>
+	<name>beosbank-undertow-service</name>
+	<url>http://maven.apache.org</url>
+	
+	<properties>
+		<undertow.port>8080</undertow.port>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-undertow</artifactId>
+			<version>${undertow.resteasy.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-cdi</artifactId>
+			<version>${undertow.resteasy.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet</artifactId>
+			<version>3.0.0.Alpha1</version>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<!-- Remove the provided scope to run mvn exec:java   -->
+			<!--  <scope>provided</scope> -->
+			
+		</dependency>
+
+
+		<!-- JPA -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.2.7.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.2.7.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>1.0.0.Final</version>
+		</dependency>
+
+		<!-- MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.41</version>
+		</dependency>
+
+		<!-- JSON -->
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jackson-provider</artifactId>
+			<version>3.1.2.Final</version>
+		</dependency>
+			
+	</dependencies>
+	
+	<build>
+	
+	<plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <configuration>
+          <mainClass>com.beosbank.jbdevg.jbdeploy.undertow.server.MoneyTransferServer</mainClass>
+          
+         	 <systemProperties>
+                    <systemProperty>
+                        <key>port</key>
+                        <value>${undertow.port}</value>
+                    </systemProperty>
+                </systemProperties>
+        </configuration>
+      </plugin>
+	</plugins>
+	
+	</build>
+</project>

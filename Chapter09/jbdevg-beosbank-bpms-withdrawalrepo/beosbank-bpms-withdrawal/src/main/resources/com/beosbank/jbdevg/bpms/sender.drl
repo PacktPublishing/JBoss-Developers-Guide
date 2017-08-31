@@ -1,0 +1,26 @@
+package com.beosbank.jbdevg.bpms;
+
+import com.beosbank.jbdevg.bpms.WithdrawalRequest
+import com.beosbank.jbdevg.bpms.RequestStatus
+import org.kie.api.runtime.process.WorkflowProcessInstance;
+
+
+
+//Check Transaction sender details
+rule "validateSenderDetails"
+ruleflow-group "InputFieldsValidadtionGroup"
+no-loop
+when 
+   _w: WithdrawalRequest(
+       senderFirstName == null || senderFirstName.trim().isEmpty() 
+       || senderLastName == null  || senderLastName.trim().isEmpty()
+       || senderCountry == null  || senderCountry.trim().isEmpty()
+        )
+      //  $pi: WorkflowProcessInstance();
+then
+    System.out.println("Invalid Transaction check Sender details " +_w.getClaimReference());
+    _w.setStatus(RequestStatus.MANDATORY_FIELDS_MISSING);
+    _w.addError("Sender Names and country are mandatory ");
+    //$pi.setVariable("wRequestOut", $w);
+   
+end

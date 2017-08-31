@@ -1,0 +1,18 @@
+{
+  "vatRate": 19.25,
+  "currency": "XAF",
+  "name": "Cameroon",
+  "country_code": "00237",
+  "country_iso": "CM",
+  "area": "Africa",
+  "feesRate":1.2
+}
+{
+     "vatRate": 20.00,
+    "currency": "EUR",
+    "name": "FRANCE",
+     "country_code": "0033",
+     "country_iso": "FR",
+     "area":"Europa",
+     "feesRate":1.5
+}

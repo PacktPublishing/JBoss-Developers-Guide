@@ -1,0 +1,18 @@
+package com.beosbank.jbdevg.bpms;
+
+
+//Check Transaction receiver details 
+rule "validateReceiverDetails"
+ruleflow-group "InputFieldsValidadtionGroup"
+no-loop
+when 
+   _w: WithdrawalRequest( receiverAge <18 ||
+       receiverFirstName == null || receiverFirstName.trim().isEmpty() 
+       || receiverLastName == null  || receiverLastName.trim().isEmpty()
+        )
+then
+    System.out.println("Invalid Transaction: Check Receiver Details " +_w.getClaimReference());
+    _w.setStatus(RequestStatus.MANDATORY_FIELDS_MISSING);
+    _w.addError("Receiver Names are mandatory and the person should be 18y+");
+    
+end

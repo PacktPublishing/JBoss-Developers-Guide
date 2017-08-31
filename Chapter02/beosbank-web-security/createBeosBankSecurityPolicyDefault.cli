@@ -1,0 +1,17 @@
+/profile=ha/subsystem=security/security-domain=beosbank-web-policy:add
+/profile=ha/subsystem=security/security-domain=beosbank-web-policy/authentication=classic:add(\
+login-modules=[\
+ 	{\
+		"code" => "org.jboss.security.auth.spi.DatabaseServerLoginModule",\
+		"flag" => "required",\
+		"module-options" => [ \
+			("dsJndiName"=>"java:jboss/datasources/MoneyTransferDS"),\
+			("principalsQuery"=>"SELECT PASSWORD FROM T_ACCOUNT WHERE USERNAME=?"),\
+			("rolesQuery"=> "SELECT ROLE, 'Roles'  FROM T_ACCOUNT WHERE USERNAME=?")\
+		]\
+
+	}\
+
+	]\
+)
+:reload-servers

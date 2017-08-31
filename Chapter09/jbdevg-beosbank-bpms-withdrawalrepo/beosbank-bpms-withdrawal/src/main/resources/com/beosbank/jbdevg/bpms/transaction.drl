@@ -1,0 +1,29 @@
+package com.beosbank.jbdevg.bpms;
+
+//Check Transaction reference 
+rule "validateTransactionDetails"
+ruleflow-group "InputFieldsValidadtionGroup"
+no-loop
+
+when 
+   _w: WithdrawalRequest(claimReference ==null || claimReference.trim().isEmpty())
+then
+   System.out.println("Invalid Transaction: check reference " +_w.getClaimReference());
+   _w.setStatus(RequestStatus.MANDATORY_FIELDS_MISSING);
+   _w.addError("Transaction reference is missing");
+end
+
+
+
+//Check Transaction reference 
+rule "validateTransactionAmount"
+ruleflow-group "InputFieldsValidadtionGroup"
+no-loop
+
+when 
+   _w: WithdrawalRequest(amount <=0)
+then
+   System.out.println("Invalid Transaction: check amount " +_w.getClaimReference());
+   _w.setStatus(RequestStatus.MANDATORY_FIELDS_MISSING);
+   _w.addError("Transaction amount is missing or invalid");
+end

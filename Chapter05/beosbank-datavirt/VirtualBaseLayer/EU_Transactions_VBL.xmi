@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:932d61d6-2a84-4afa-bd3f-0f41007fde48" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="11.0.1.Final-v20170208-2046-B4143">
+    <modelImports xmi:uuid="mmuuid:f9c23043-3a52-4322-834e-012f2d7e5bf1" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:bacc297d-0a8e-4603-8850-082d4c44b883" name="AF_Transactions" modelLocation="../DataSources/AF_Transactions.xmi" uuid="mmuuid:b4fff8d4-24b8-4119-8aaf-3809b1451d1b" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+    <modelImports xmi:uuid="mmuuid:88dee41e-6616-4b65-b1a8-51b06d512610" name="EU_Transactions" modelLocation="../DataSources/EU_Transactions.xmi" uuid="mmuuid:18904c51-2141-4d95-8880-03dc9d56c71e" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+  </mmcore:ModelAnnotation>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:4098af4b-0156-4260-a180-0ea1b978e76f">
+    <diagram xmi:uuid="mmuuid:c4f622ba-c351-40aa-ad28-47bf096705db" type="packageDiagramType" target="mmuuid/932d61d6-2a84-4afa-bd3f-0f41007fde48">
+      <diagramEntity xmi:uuid="mmuuid:1eac30f4-b00e-4234-8320-ab75c57354a8" modelObject="mmuuid/e8634ce1-32a4-4070-9721-5fe28523cc8d" xPosition="40" yPosition="30"/>
+    </diagram>
+  </diagram:DiagramContainer>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:3192ca82-090a-4298-93ba-52c380d9522b">
+    <annotations xmi:uuid="mmuuid:ef9a9b94-608b-48f8-aaab-5e201c79134e" annotatedObject="mmuuid/932d61d6-2a84-4afa-bd3f-0f41007fde48">
+      <tags xmi:uuid="mmuuid:d289b5d5-8858-497a-b5d1-dfa44261602b" key="modelExtensionDefinition:relational" value="relational"/>
+      <tags xmi:uuid="mmuuid:2fe2d875-ec89-458b-96df-324d153c60a5" key="modelExtensionDefinition:REST" value="REST"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:863a023f-a67f-4f43-8eef-f8f2e28d816d" annotatedObject="mmuuid/d289b5d5-8858-497a-b5d1-dfa44261602b">
+      <tags xmi:uuid="mmuuid:5dd0632d-8cfb-483a-8ec2-09c44b953820" key="metamodel" value="http://www.metamatrix.com/metamodels/Relational"/>
+      <tags xmi:uuid="mmuuid:19e5e385-2b02-4989-9f6b-5adfe4fff770" key="namespacePrefix" value="relational"/>
+      <tags xmi:uuid="mmuuid:ba232475-84fd-48b6-bcbd-5e9857feee48" key="namespaceUri" value="http://www.teiid.org/ext/relational/2012"/>
+      <tags xmi:uuid="mmuuid:d8cf20c4-39b8-4689-8f72-4e94f17bb9c6" key="version" value="7"/>
+      <tags xmi:uuid="mmuuid:b8ff601b-a0c6-4a2b-92c0-f3b4b34078df" key="description" value="Relational metamodel extension properties"/>
+      <tags xmi:uuid="mmuuid:14f8d339-8f0c-4446-9000-7263e644cfb1" key="modelTypes" value=""/>
+      <tags xmi:uuid="mmuuid:94252f12-6223-4378-9de1-d1efe476c3d7" key="extendedMetaclass:org.teiid.designer.metamodels.relational.impl.ProcedureImpl" value="org.teiid.designer.metamodels.relational.impl.ProcedureImpl"/>
+      <tags xmi:uuid="mmuuid:d4afdce3-6a3f-4cbe-923d-dbcbb071d46c" key="extendedMetaclass:org.teiid.designer.metamodels.relational.impl.BaseTableImpl" value="org.teiid.designer.metamodels.relational.impl.BaseTableImpl"/>
+      <tags xmi:uuid="mmuuid:29e16459-3cf1-489d-bfc4-77c33f3286f3" key="extendedMetaclass:org.teiid.designer.metamodels.relational.impl.ForeignKeyImpl" value="org.teiid.designer.metamodels.relational.impl.ForeignKeyImpl"/>
+      <tags xmi:uuid="mmuuid:1801ca36-8717-47a7-b795-044a45c9518e" key="extendedMetaclass:org.teiid.designer.metamodels.relational.impl.ProcedureParameterImpl" value="org.teiid.designer.metamodels.relational.impl.ProcedureParameterImpl"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:dd84ac08-a038-4de4-94d0-30b0b42a5d89" annotatedObject="mmuuid/14f8d339-8f0c-4446-9000-7263e644cfb1">
+      <tags xmi:uuid="mmuuid:ede2a029-0b7a-47a2-b09f-f4ece211f984" key="PHYSICAL" value=""/>
+      <tags xmi:uuid="mmuuid:65273e2d-f758-4ca4-81b7-4800b361bfab" key="VIRTUAL" value=""/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:23438bda-d1ac-4e24-a51a-204609cbf01f" annotatedObject="mmuuid/94252f12-6223-4378-9de1-d1efe476c3d7">
+      <tags xmi:uuid="mmuuid:c304d931-cbd6-4d30-a3e3-2e9f7c94d56e" key="propertyDefinition:deterministic" value="deterministic"/>
+      <tags xmi:uuid="mmuuid:e8d2d376-48ec-4913-8106-a3fcab2b89ee" key="propertyDefinition:native-query" value="native-query"/>
+      <tags xmi:uuid="mmuuid:ba02a3b7-8628-444c-9b8c-031ea1d4acf8" key="propertyDefinition:non-prepared" value="non-prepared"/>
+      <tags xmi:uuid="mmuuid:f7ec9588-3eda-4703-8fc3-d935f431b00e" key="propertyDefinition:aggregate" value="aggregate"/>
+      <tags xmi:uuid="mmuuid:b977158c-7582-45a9-aaf7-cab75eceac4c" key="propertyDefinition:analytic" value="analytic"/>
+      <tags xmi:uuid="mmuuid:ab551b1b-38bc-4137-88a8-a44b200a849b" key="propertyDefinition:allows-orderby" value="allows-orderby"/>
+      <tags xmi:uuid="mmuuid:8358ae52-805c-4709-a1bb-770a42905684" key="propertyDefinition:uses-distinct-rows" value="uses-distinct-rows"/>
+      <tags xmi:uuid="mmuuid:e0f169ec-3502-4587-b74c-fdf06c821564" key="propertyDefinition:allows-distinct" value="allows-distinct"/>
+      <tags xmi:uuid="mmuuid:18f034bd-ce25-476f-958d-473be4b529b2" key="propertyDefinition:decomposable" value="decomposable"/>
+      <tags xmi:uuid="mmuuid:3022bde8-748c-4ff6-994c-692da4b0dd3d" key="propertyDefinition:varargs" value="varargs"/>
+      <tags xmi:uuid="mmuuid:06a90756-a132-47de-936b-91530e0a43df" key="propertyDefinition:null-on-null" value="null-on-null"/>
+      <tags xmi:uuid="mmuuid:999a3719-3209-42dd-8292-2eb02be207ab" key="propertyDefinition:function-category" value="function-category"/>
+      <tags xmi:uuid="mmuuid:ef162cdc-f0c1-4137-99ec-3a1c083cabab" key="propertyDefinition:java-class" value="java-class"/>
+      <tags xmi:uuid="mmuuid:bd3199b7-f7f1-4cd0-8dac-a971e8d75bb3" key="propertyDefinition:java-method" value="java-method"/>
+      <tags xmi:uuid="mmuuid:e8f243e4-1e04-45af-813f-003ed8f93548" key="propertyDefinition:udfJarPath" value="udfJarPath"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:c1a18fb4-d73c-4070-9095-ed2422f0cc4a" annotatedObject="mmuuid/c304d931-cbd6-4d30-a3e3-2e9f7c94d56e">
+      <tags xmi:uuid="mmuuid:bde53e94-5146-4ec5-b411-80d70564900a" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:6c074743-ccc5-4641-919f-d4f4fb8990d2" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:8086b176-fcb0-44f2-92d6-19515f5e4ec9" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:e8e83264-c1e8-457a-b44a-f4c796f094f0" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:5f371033-b7cc-4353-a17c-be47115e1116" key="id" value="deterministic"/>
+      <tags xmi:uuid="mmuuid:4eb69053-7532-4cca-9092-fd172eef4878" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:f94848d8-d565-44f0-a84a-25e84f45fd46" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:433920fe-8d56-4daa-b320-8bdf9426b285" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:7fb43103-782c-46c5-8468-24f58888a161" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:acefd958-b622-464f-ab0d-e7b3b1f78977" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:5438e887-cde3-4aa7-83d2-47a4952d8021" annotatedObject="mmuuid/6c074743-ccc5-4641-919f-d4f4fb8990d2">
+      <tags xmi:uuid="mmuuid:6922eedd-72d2-4a95-a9d4-3ed92d326fa3" key="en" value="Deterministic"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:1b70a926-8160-40f2-a5b1-24985485d322" annotatedObject="mmuuid/e8e83264-c1e8-457a-b44a-f4c796f094f0">
+      <tags xmi:uuid="mmuuid:ff1e6610-94f7-4ff0-b0ef-5919365f34cf" key="en" value="Specifies that the source function will always return the same result for a specific input value"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:ed7d3d99-286e-41cb-aaeb-a795c9c272e5" annotatedObject="mmuuid/e8d2d376-48ec-4913-8106-a3fcab2b89ee">
+      <tags xmi:uuid="mmuuid:1b3506b8-006a-4939-9ebb-f6af5ce9ae76" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:a4677450-8299-463b-abc0-d8f64b101b0a" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:aafe85c1-11cb-4b71-9826-205ccb172d1a" key="id" value="native-query"/>
+      <tags xmi:uuid="mmuuid:3c96b63e-3790-4d5f-aad6-6ec8a6fca40b" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:eb356828-a289-46bc-a571-eb41889c15e6" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:5fffea6a-b476-4b51-8393-d0611c0cd694" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:06541de0-5a7b-41f5-9490-b9cc85271831" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:4ab2022a-5584-410d-bb58-d86727e13268" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:4fd7000f-a59e-47a8-acda-cb7d7ef56e7c" annotatedObject="mmuuid/a4677450-8299-463b-abc0-d8f64b101b0a">
+      <tags xmi:uuid="mmuuid:a91580d7-6a2f-4e20-b8a3-0f1e99c8146f" key="en" value="Native Query"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:527db0a8-3dd6-4932-91bc-f2a40a9ccd85" annotatedObject="mmuuid/ba02a3b7-8628-444c-9b8c-031ea1d4acf8">
+      <tags xmi:uuid="mmuuid:70a7cbe6-c203-4ead-b2de-54ca258824b9" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:8fdb97d9-e59f-42d0-a564-cb58c0a112f5" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:dd6221d1-4d93-475c-9622-9f80d8ae3d49" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:eefe03b2-d5f6-409f-916e-2af8eaf6e367" key="id" value="non-prepared"/>
+      <tags xmi:uuid="mmuuid:835110ee-a96d-48f3-8d0b-d576e5bfcef3" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:ef6f3abe-1777-44e6-a16d-7ff2d3e89793" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:0affea2a-2b9e-4ea1-9a52-11b81e6de963" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:04e7e829-6998-4a7b-9228-adb7536246d1" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:a848f99c-d151-4e68-80af-a1b443f675af" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:81f2543f-c829-40a0-907a-f550a2d3b0ad" annotatedObject="mmuuid/8fdb97d9-e59f-42d0-a564-cb58c0a112f5">
+      <tags xmi:uuid="mmuuid:c91f1314-2178-4a90-b5c2-8c71429fee78" key="en" value="Non-Prepared"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:84dcab7d-67b5-42e5-88d8-9ee186796788" annotatedObject="mmuuid/f7ec9588-3eda-4703-8fc3-d935f431b00e">
+      <tags xmi:uuid="mmuuid:1e0872f5-cb64-4093-9ac0-482b6efa7333" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:6734c6c2-b057-469d-be7a-f3ca01a3333b" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:479aa1b8-e3c7-4615-868a-6349f6a12871" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:67b18ff5-9d5b-44c4-b06e-5e078ba71401" key="id" value="aggregate"/>
+      <tags xmi:uuid="mmuuid:a08af340-9ddd-4fe0-b292-cbf0b8cb746a" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:0b3f8ef3-2dda-48ab-be6e-2d600c201ae5" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:a7532050-d36a-4df4-ae61-3534afedf665" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:5de5db24-165e-4f75-bb92-b9bd419651ce" key="required" value="true"/>
+      <tags xmi:uuid="mmuuid:c5bfb44d-c9e4-423d-8230-2c95b0d6bc69" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:895266a1-fa31-4a5c-9afc-75fe051fe650" annotatedObject="mmuuid/6734c6c2-b057-469d-be7a-f3ca01a3333b">
+      <tags xmi:uuid="mmuuid:7b5d28c9-fe89-4f80-9b72-774b73bb7f07" key="en" value="Aggregate"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:c70a6612-a63a-419f-8af3-c68023e2ac45" annotatedObject="mmuuid/b977158c-7582-45a9-aaf7-cab75eceac4c">
+      <tags xmi:uuid="mmuuid:3428dd22-82e8-4873-af4b-24bbded48085" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:73f6a81d-db8e-496a-94bf-409c3bf6398c" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:5ab74d19-767c-47b9-96ba-bccf329f287a" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:40ea5a4b-e1ca-4ec1-b392-8762efbdea99" key="id" value="analytic"/>
+      <tags xmi:uuid="mmuuid:a6585d8e-2b3c-4a62-b88b-88946891b361" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:d9664db0-5a51-4b46-881a-5875fd29a69c" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:4cbe6f29-486c-4443-94de-da1aed01dd11" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:f16b70a4-9301-4190-b83f-4db41c6c824c" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:f9fb5eb5-9706-44cf-a27c-3e48afbf65a8" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:12cc62f6-f02f-431b-9c36-b10f30ac6aff" annotatedObject="mmuuid/73f6a81d-db8e-496a-94bf-409c3bf6398c">
+      <tags xmi:uuid="mmuuid:d9526255-c87c-4c93-a188-101fad24ea7c" key="en" value="Analytic"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:a154c4bd-c5a3-4a08-91bf-59f8edac9235" annotatedObject="mmuuid/ab551b1b-38bc-4137-88a8-a44b200a849b">
+      <tags xmi:uuid="mmuuid:97ed53ce-6ad5-4c40-ba6d-eda457ab3a09" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:a4aca2c3-c326-4504-8d8f-49e91cddc229" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:5af28fe3-0656-437f-a49c-35fba5a6d181" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:7b96cfa2-6bbf-4fc1-93af-1c6241f64cfe" key="id" value="allows-orderby"/>
+      <tags xmi:uuid="mmuuid:253f499d-a1f9-4995-8d96-ac5f9bb5b280" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:7ecc80ec-f1db-4ba1-9a4e-7c3e27afe69d" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:c29a42bb-76c3-4528-bb24-e5613b793af3" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:aeff1f25-913c-4632-99cf-30b73b903502" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:33fc2d89-92a0-4196-9399-7d03217f2864" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:c056437b-a724-4a09-ae1a-297874bec166" annotatedObject="mmuuid/a4aca2c3-c326-4504-8d8f-49e91cddc229">
+      <tags xmi:uuid="mmuuid:7fcf6d68-f0d5-45e3-abc9-212d5e94b887" key="en" value="Allows Order-by"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:962612b2-b520-4ffd-9953-d0979c2c9317" annotatedObject="mmuuid/8358ae52-805c-4709-a1bb-770a42905684">
+      <tags xmi:uuid="mmuuid:ab381ec7-af8d-46f9-837e-69b76aceb905" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:2a3cb723-48cd-4839-a8d4-c13f49f1e396" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:286b5b99-5366-49dd-8ea9-8e3271b331db" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:7ba49442-e01f-484a-a668-0cca98b7dfa2" key="id" value="uses-distinct-rows"/>
+      <tags xmi:uuid="mmuuid:e5a34596-bd17-4cdc-9884-faef06128163" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:d53852c0-a998-417d-86c8-e66db95e3dc7" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:7937fe44-fb68-4780-b840-c8e95dc1b944" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:3e8fa6a7-aa74-4661-9030-bfa7dbc24094" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:f99d8ed7-406d-42ff-b185-fb9d7ab2762e" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:d63af86d-ee91-4a2c-b3c7-8176b4a8d9e1" annotatedObject="mmuuid/2a3cb723-48cd-4839-a8d4-c13f49f1e396">
+      <tags xmi:uuid="mmuuid:fe562d07-aeb9-4e38-9d82-d6b20c74fbf1" key="en" value="Uses Distinct Rows"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:dffeeca7-7dbb-4d4f-9802-90525deef686" annotatedObject="mmuuid/e0f169ec-3502-4587-b74c-fdf06c821564">
+      <tags xmi:uuid="mmuuid:69317478-8115-4d96-baad-e76722f5b82c" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:1ad9535d-4069-4db0-9093-a6742fe3ff9b" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:c72b8817-6e73-465e-b078-5c8957fa73b9" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:eaec1099-ca8a-444b-9a1c-fd97f7fb195f" key="id" value="allows-distinct"/>
+      <tags xmi:uuid="mmuuid:f62c4689-d87b-4505-9339-d36718ecdd1f" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:99eb3022-c431-444c-9afb-0dfe9bba5ba0" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:1053d39d-0856-453a-8b12-d16b10336f2d" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:5f8e1d57-2983-4848-9499-d458c3e0f2fc" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:5ff86d8e-e7bc-489c-8d8d-115cfff076de" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:1f1d8c50-ce26-48ed-8fc1-a57e4ed37be7" annotatedObject="mmuuid/1ad9535d-4069-4db0-9093-a6742fe3ff9b">
+      <tags xmi:uuid="mmuuid:20e623b1-ef62-4c57-9db9-520870fae965" key="en" value="Allows Distinct"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:a44769af-d033-41b2-8064-0f6e30ed897e" annotatedObject="mmuuid/18f034bd-ce25-476f-958d-473be4b529b2">
+      <tags xmi:uuid="mmuuid:14d603f3-5969-4354-81da-6284603306bf" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:8ae5f8c9-a3c5-4ba4-8d99-674cabb20db9" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:450ff348-c35a-414a-a448-5338cbfd58f2" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:6de7bf1d-a67e-4b23-a030-ce023fc54522" key="id" value="decomposable"/>
+      <tags xmi:uuid="mmuuid:f39ebf1b-c82c-47c8-b717-1199d0d49fb0" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:5a69b57f-5883-4b34-9ad7-a991c52dc238" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:d5b85298-2ecf-42df-9212-159d42dc0df7" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:01e7cb53-86f8-47d1-ba27-2b605ae0b2bd" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:9a5ddb79-2234-4111-ad35-4f8bd2be2d2d" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:51220148-4119-4193-abf3-964505f33e2b" annotatedObject="mmuuid/8ae5f8c9-a3c5-4ba4-8d99-674cabb20db9">
+      <tags xmi:uuid="mmuuid:9f428538-c5d2-4e78-87ab-e9d67f8e982e" key="en" value="Decomposable"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:a4e8985f-cafd-4036-9586-1f17811ae80e" annotatedObject="mmuuid/3022bde8-748c-4ff6-994c-692da4b0dd3d">
+      <tags xmi:uuid="mmuuid:9a8e8ad5-1b50-4459-897c-ba3f762a074e" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:47312341-0b45-4260-848c-f79e53f1ec5c" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:65282bda-378d-4e91-b988-ab018f9da02b" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:1bcab3c0-a1de-4b1c-b594-151e16bf6acb" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:dba1b1f4-b763-4e91-b487-a978d0035e03" key="id" value="varargs"/>
+      <tags xmi:uuid="mmuuid:2f616d9d-04a8-42d8-a8fc-1d35cdaf1c6b" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:a0be2ea3-0adf-4105-afbc-9a5e4881c0ea" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:c1013ecd-afcb-4684-afe6-7240b9ddbe97" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:c300c404-4f2c-4f79-becc-ffbe9802b8e4" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:1614c632-df24-4e20-8a8a-4bdf835db64f" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:2393e2c7-2d8f-40fd-99d2-be96b7693427" annotatedObject="mmuuid/47312341-0b45-4260-848c-f79e53f1ec5c">
+      <tags xmi:uuid="mmuuid:29c42f2a-ffa0-4adc-950c-99d30f955b03" key="en_US" value="Variable Arguments"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:a631e304-2915-48ca-b225-f2417ed6421c" annotatedObject="mmuuid/1bcab3c0-a1de-4b1c-b594-151e16bf6acb">
+      <tags xmi:uuid="mmuuid:4ad3cfc6-5389-4506-b2f3-ab317a8413b1" key="en_US" value="Indicates that the last arg may be repeated a variable number of times."/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:6a229fdd-4c16-4821-ac51-19cf44f5a374" annotatedObject="mmuuid/06a90756-a132-47de-936b-91530e0a43df">
+      <tags xmi:uuid="mmuuid:2b020640-8923-4cbb-9644-4a7abfebf7c1" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:8c9871e2-eb9d-46ad-8f89-f0e661804ad6" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:fd430014-abdb-4227-bedc-940bb49f8483" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:3c51ce17-934c-4dfb-984b-515675c0a62d" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:9500cb8f-e9bc-4985-8e7d-e52ca016c6a9" key="id" value="null-on-null"/>
+      <tags xmi:uuid="mmuuid:451ecd47-e526-4b80-a071-95a97d0b5858" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:0e5bb9ab-004a-4735-bf4c-b9f44b66afee" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:e89d2f1c-6ecc-401b-b81e-52115153ff23" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:f149333d-feff-42ee-b343-00db76a88d3d" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:e5e2f2b7-5d7d-4b1b-8a80-8b3366932d91" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:060b896b-b8d8-45ad-ba2d-d3f355351504" annotatedObject="mmuuid/8c9871e2-eb9d-46ad-8f89-f0e661804ad6">
+      <tags xmi:uuid="mmuuid:9050488f-aa1d-4a83-b608-423eed017530" key="en_US" value="Returns null on null"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:22cd2b0b-f8da-43bf-a070-21985f9a17b9" annotatedObject="mmuuid/3c51ce17-934c-4dfb-984b-515675c0a62d">
+      <tags xmi:uuid="mmuuid:7562ac7a-d055-4061-9d4a-fb0d2b0fb94b" key="en_US" value="indicates that the function will return null."/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:f9177536-e2d0-4f08-b5ec-b86c91f70985" annotatedObject="mmuuid/999a3719-3209-42dd-8292-2eb02be207ab">
+      <tags xmi:uuid="mmuuid:9a734b8b-a115-4bc8-b666-66c5933cd78c" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:d079cc24-cb47-4e41-9e55-664868c3d9e5" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:9fbfd4c3-e38d-4d59-9c59-55a1ad391b52" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:24fe0e9f-7af2-441a-a6cd-54a44c624660" key="id" value="function-category"/>
+      <tags xmi:uuid="mmuuid:835fde13-5238-414c-a9ed-d4b114aa2c28" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:53dadd93-084c-4ac7-9bad-e4b2077c4ed4" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:366a374d-3e4b-4d26-a8ac-81ed9eb3ae79" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:7cb77689-46db-4eb6-8628-4b7cc5ddb67f" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:078ce45f-07c7-46b4-9ff2-af9c9d6bfee3" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:2982101e-29de-426f-8b8c-f0eb1b0ac39e" annotatedObject="mmuuid/d079cc24-cb47-4e41-9e55-664868c3d9e5">
+      <tags xmi:uuid="mmuuid:cef96afc-9586-45b7-a09c-f6358756a8f8" key="en_US" value="Function Category"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:b71d5402-47ff-4d41-8eed-c48eff65cbcc" annotatedObject="mmuuid/9fbfd4c3-e38d-4d59-9c59-55a1ad391b52">
+      <tags xmi:uuid="mmuuid:7076b560-f6ed-429b-9e28-19276061c070" key="en_US" value="The category for function procedures"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:15ac10ac-d46e-4b8a-9b5a-3a53f43ea5f0" annotatedObject="mmuuid/ef162cdc-f0c1-4137-99ec-3a1c083cabab">
+      <tags xmi:uuid="mmuuid:c22a652d-c8da-4d9f-9d76-c323e00b5677" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:bc7cd0d0-e773-44b2-99b8-6dafd509e508" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:ee314563-bf69-4af0-8066-a7e044fd45af" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:4b3b9571-50b2-44fc-ac3f-c06972f2f4a0" key="id" value="java-class"/>
+      <tags xmi:uuid="mmuuid:590b80cb-3301-42cf-9768-63adb85b5c35" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:187ac880-1b2f-4c2e-b8ba-86457c5c29c3" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:14bf8e4c-1d67-44ca-9458-a9c0b0defb4b" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:17a75c95-8145-4754-a982-c060cdd9851c" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:99e2e930-8af2-4f95-8dc7-0407e4702445" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:79a0a5d6-886e-4806-8035-4d6425bc4df0" annotatedObject="mmuuid/bc7cd0d0-e773-44b2-99b8-6dafd509e508">
+      <tags xmi:uuid="mmuuid:68761a1d-654f-48d4-ae47-e4de851c92a4" key="en_US" value="Java Class"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:83e2672c-bca2-47aa-9d64-15e0b6934f79" annotatedObject="mmuuid/ee314563-bf69-4af0-8066-a7e044fd45af">
+      <tags xmi:uuid="mmuuid:98484dff-d598-4940-9050-64a1dad417b5" key="en_US" value="The java class containing the user defined function"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:0f625494-5318-4f1e-86c9-089f46a6aea1" annotatedObject="mmuuid/bd3199b7-f7f1-4cd0-8dac-a971e8d75bb3">
+      <tags xmi:uuid="mmuuid:edff9783-ec3c-4b17-9343-6d2c39f8a396" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:0a20ecc5-82b3-4f06-a02d-5261a410412e" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:0128cfb3-233f-4ae4-8d01-c6a3dd9db264" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:d6280fda-ab4b-4160-8161-396f24dd2b07" key="id" value="java-method"/>
+      <tags xmi:uuid="mmuuid:d2541f17-33cb-4ab9-956a-4a4e0791ea81" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:637b055e-6e52-4035-8a88-a43a8a88b5fd" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:a4fd1ea1-bbc5-422e-a4cf-58938e37031b" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:81af7114-337a-4c79-9d20-a80ae2f62f46" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:0831429c-98e1-48af-bd8b-cc8086683632" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:4c6ccfa7-9d36-4073-bb58-640d800081d1" annotatedObject="mmuuid/0a20ecc5-82b3-4f06-a02d-5261a410412e">
+      <tags xmi:uuid="mmuuid:83f238af-d76f-4ac5-9e30-b8491591b255" key="en_US" value="Java Method"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:481255f2-7ff1-438f-af22-59eec1d421cc" annotatedObject="mmuuid/0128cfb3-233f-4ae4-8d01-c6a3dd9db264">
+      <tags xmi:uuid="mmuuid:1c3e3db5-f587-44de-8aae-150d7584d26b" key="en_US" value="The java method defining the user defined function"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:1761e32d-8c47-48bb-b8b9-f185a5561dcd" annotatedObject="mmuuid/e8f243e4-1e04-45af-813f-003ed8f93548">
+      <tags xmi:uuid="mmuuid:0f604f17-6557-4c7b-ab60-5daa3f368158" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:63c4f54c-6a8f-45da-b704-53f17bdf4ea9" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:f983f1d7-4ea7-46f0-bd1c-26affddae48a" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:175bd479-fee5-4c30-a7a7-36e3a2ab3223" key="id" value="udfJarPath"/>
+      <tags xmi:uuid="mmuuid:f313443c-1224-488c-9df6-54c2fb1ddbb0" key="index" value="false"/>
+      <tags xmi:uuid="mmuuid:a06be016-6085-4941-a1a1-50a1bc73e7c6" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:249993f8-e862-4b42-9bc2-262570f8577a" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:71b1ab76-d899-48c8-b87f-0997842035bd" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:e0f5567e-0398-4b2f-886e-22181cd12c8c" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:f3ff371b-00f6-4a3f-8c3c-fb2367646240" annotatedObject="mmuuid/63c4f54c-6a8f-45da-b704-53f17bdf4ea9">
+      <tags xmi:uuid="mmuuid:ce3656c2-8c76-48df-bc3a-29be6f6ecd7d" key="en" value="UDF Jar Path"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:1cabb973-9898-4e37-81cf-212603f458a7" annotatedObject="mmuuid/f983f1d7-4ea7-46f0-bd1c-26affddae48a">
+      <tags xmi:uuid="mmuuid:8212e4fc-5e76-4bcb-98e4-fab4ac79a2ad" key="en_US" value="The project-relative path where the UDF jar is located"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:46e07e27-38fa-4582-8a9b-3d4c28a959db" annotatedObject="mmuuid/d4afdce3-6a3f-4cbe-923d-dbcbb071d46c">
+      <tags xmi:uuid="mmuuid:21f2125f-22c0-4e49-9399-d9c2d0ddabdd" key="propertyDefinition:native-query" value="native-query"/>
+      <tags xmi:uuid="mmuuid:c38905c6-75cd-4f3e-b13b-99dc2d51dcf4" key="propertyDefinition:global-temp-table" value="global-temp-table"/>
+      <tags xmi:uuid="mmuuid:27b3f24a-afa7-4516-9090-a3e974982a18" key="propertyDefinition:ALLOW_MATVIEW_MANAGEMENT" value="ALLOW_MATVIEW_MANAGEMENT"/>
+      <tags xmi:uuid="mmuuid:3a45645b-a004-428f-a95f-c3c0978ab0b9" key="propertyDefinition:MATVIEW_STATUS_TABLE" value="MATVIEW_STATUS_TABLE"/>
+      <tags xmi:uuid="mmuuid:3340a384-5451-414e-82ee-d4804370e70e" key="propertyDefinition:MATVIEW_BEFORE_LOAD_SCRIPT" value="MATVIEW_BEFORE_LOAD_SCRIPT"/>
+      <tags xmi:uuid="mmuuid:79853e54-b09a-4570-8de3-ac8a0fa00bfb" key="propertyDefinition:MATVIEW_LOAD_SCRIPT" value="MATVIEW_LOAD_SCRIPT"/>
+      <tags xmi:uuid="mmuuid:852d58b3-d8b4-4214-82fd-5a08dbb6c639" key="propertyDefinition:MATVIEW_AFTER_LOAD_SCRIPT" value="MATVIEW_AFTER_LOAD_SCRIPT"/>
+      <tags xmi:uuid="mmuuid:96963067-ce56-48a8-99be-4d6526c7ec16" key="propertyDefinition:MATVIEW_SHARE_SCOPE" value="MATVIEW_SHARE_SCOPE"/>
+      <tags xmi:uuid="mmuuid:afda3a5b-03fc-4455-971d-4cb06bd96b18" key="propertyDefinition:MATERIALIZED_STAGE_TABLE" value="MATERIALIZED_STAGE_TABLE"/>
+      <tags xmi:uuid="mmuuid:101cdc44-6bb3-4875-9bea-bfcf423cde3c" key="propertyDefinition:ON_VDB_START_SCRIPT" value="ON_VDB_START_SCRIPT"/>
+      <tags xmi:uuid="mmuuid:fa9a4d65-2aab-44fe-9fba-b2030be959a0" key="propertyDefinition:ON_VDB_DROP_SCRIPT" value="ON_VDB_DROP_SCRIPT"/>
+      <tags xmi:uuid="mmuuid:662f9cae-e46a-4f43-bc99-0efaf8e2048f" key="propertyDefinition:MATVIEW_ONERROR_ACTION" value="MATVIEW_ONERROR_ACTION"/>
+      <tags xmi:uuid="mmuuid:72152e95-a69c-4a0c-bc07-107c399104f8" key="propertyDefinition:MATVIEW_TTL" value="MATVIEW_TTL"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:2b11a815-5984-438f-b4a5-660e0375701c" annotatedObject="mmuuid/21f2125f-22c0-4e49-9399-d9c2d0ddabdd">
+      <tags xmi:uuid="mmuuid:03d7a94d-eaca-41f7-9607-2f05feacdda2" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:04a1e46b-f596-473c-8fb9-321e282a152f" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:a7ed3f1b-63a5-498b-bfd8-e7865417c7ad" key="id" value="native-query"/>
+      <tags xmi:uuid="mmuuid:ccf662b5-8918-4791-98d0-382474a046bc" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:39dd1673-7476-4917-aa65-e23e302ce836" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:1638ffa0-658a-4754-a0c2-79435ee35b75" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:d90ba0f6-5bcf-40e7-894b-a62e1b50084b" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:7b96dd4d-215c-4c4e-981c-c8125182476e" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:a29de7b6-5d61-4845-84ab-056846e01a53" annotatedObject="mmuuid/04a1e46b-f596-473c-8fb9-321e282a152f">
+      <tags xmi:uuid="mmuuid:39986549-d85d-4114-a5e9-c8a56f384d2b" key="en" value="Native Query"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:a019eaf9-847d-4402-8b66-42dbc0b29263" annotatedObject="mmuuid/c38905c6-75cd-4f3e-b13b-99dc2d51dcf4">
+      <tags xmi:uuid="mmuuid:5b44e61a-cf40-409c-87bd-77baad5ee07a" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:81025ae1-675d-4adb-be00-21f881c94865" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:81b238b6-47a0-4fff-96bc-36176cb6be16" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:e6017054-d6b7-4571-a4af-164d2fa75251" key="id" value="global-temp-table"/>
+      <tags xmi:uuid="mmuuid:92c7707d-0351-4c06-a46b-d2f65990435b" key="index" value="false"/>
+      <tags xmi:uuid="mmuuid:8984ffe6-daac-47a1-b043-2117cc879ac4" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:74d68942-90e2-40da-be0d-23dd9cce9c9a" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:37a7c32d-664b-44c9-be85-578255915668" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:1334abdf-de3a-4abd-b920-100ecdfd4895" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:dd569aeb-127f-49bf-9336-3497d606f6d7" annotatedObject="mmuuid/81025ae1-675d-4adb-be00-21f881c94865">
+      <tags xmi:uuid="mmuuid:021130f5-a849-418a-9af8-942fb1dce469" key="en_US" value="Global Temp Table"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:5d48fbce-2ef0-4875-906f-4ab7e3b3ccb1" annotatedObject="mmuuid/27b3f24a-afa7-4516-9090-a3e974982a18">
+      <tags xmi:uuid="mmuuid:5ca15f10-7173-4c74-8aa1-e8b4d237ecdd" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:4ba7a505-5cf7-4dcc-bdda-8159b2c6601a" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:3efcf762-c520-4605-99ef-3e270e0ca0e3" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:2347dcb0-27fc-4a67-b2bc-3f51fa5a7226" key="id" value="ALLOW_MATVIEW_MANAGEMENT"/>
+      <tags xmi:uuid="mmuuid:4d7f776f-6e06-4da1-bbbb-000f57b454dd" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:a1337523-8b6a-4c9a-ab05-eb0b8ef10228" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:6446487a-5f30-4178-94e8-5e7f43b44a71" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:18f61fcd-3522-46f9-b6ad-ff0bf6f1873a" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:310ecbe5-c697-4fe3-a73d-1db8a6a6c4b9" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:f9e7285f-45c5-4e0f-9910-1594dfacd232" annotatedObject="mmuuid/4ba7a505-5cf7-4dcc-bdda-8159b2c6601a">
+      <tags xmi:uuid="mmuuid:677c930f-7179-4918-9c59-5b92ae83d325" key="en_US" value="Allow Teiid based management"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:3da7a143-065b-46f4-9a54-ac920153f55f" annotatedObject="mmuuid/3a45645b-a004-428f-a95f-c3c0978ab0b9">
+      <tags xmi:uuid="mmuuid:9d949efb-4ed2-4487-b4ec-ccdf732aa3a3" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:a1db9d16-63ed-4363-9682-7f07d9a532d1" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:30114373-a3b8-4925-9fb8-4bad677212e2" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:71e3fc4a-6d0b-49a2-b920-2f04320a1c6e" key="id" value="MATVIEW_STATUS_TABLE"/>
+      <tags xmi:uuid="mmuuid:72f07e4a-6ab3-4e67-88a1-b949f2a0ffd4" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:755ebb7e-5768-4c90-a9c6-ce94cdbf982f" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:4a2b3fe4-439a-4676-b475-e8d07a9da7a9" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:07342d62-a83f-4a74-a56b-710c491387f8" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:c4efbebb-8240-4d5a-a3e5-269056dbfe96" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:de736986-3a3a-4d00-b216-3e2a0cc26a27" annotatedObject="mmuuid/a1db9d16-63ed-4363-9682-7f07d9a532d1">
+      <tags xmi:uuid="mmuuid:4fe09ed5-d189-4268-974a-b47f7cf83432" key="en_US" value="Status Table Name"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:c2b95191-3563-462c-8207-6d4b6ca4671c" annotatedObject="mmuuid/30114373-a3b8-4925-9fb8-4bad677212e2">
+      <tags xmi:uuid="mmuuid:149d0c14-f88d-430e-a851-494114b0a7fb" key="en_US" value="fully qualified Status Table Name"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:55c4dd77-8514-4a12-ab37-f0371eb06383" annotatedObject="mmuuid/3340a384-5451-414e-82ee-d4804370e70e">
+      <tags xmi:uuid="mmuuid:25de3512-4b6d-458f-a2b7-bb9d0fab8684" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:6f2a2c92-7a19-49c3-85ba-489adc263653" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:55d8c189-bee4-40e4-8ee2-3905b8c63491" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:e614ab3f-130c-4621-b4bf-1a45bacf784e" key="id" value="MATVIEW_BEFORE_LOAD_SCRIPT"/>
+      <tags xmi:uuid="mmuuid:c692a0a8-51a6-4d31-bd9c-4e67f04186c5" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:c8934800-dd9a-4858-9a4c-99ba213df6cd" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:ffbd3a78-ab97-4566-86c1-be921325ac25" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:c4859122-5b57-4a3e-bd09-2fb673b9e75b" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:ced3d93f-65d7-45bc-88c5-8a75974f86e8" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:ed943858-6c55-4de7-8c49-5d169fd0fd66" annotatedObject="mmuuid/6f2a2c92-7a19-49c3-85ba-489adc263653">
+      <tags xmi:uuid="mmuuid:84965944-4502-4a6f-8e62-5aa03bf15b1f" key="en_US" value="Materialize Before Load Script"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:20c1c971-bf5b-4b8b-b889-dc52f1cb5670" annotatedObject="mmuuid/55d8c189-bee4-40e4-8ee2-3905b8c63491">
+      <tags xmi:uuid="mmuuid:bead6ffd-1d18-4cee-8815-0629c2c6f82a" key="en_US" value="semi-colon(;) separated DDL/DML commands to run before the actual load of the cache, typically used to truncate staging table "/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:d9a5f801-7908-48e5-893a-12f8e8e56e2f" annotatedObject="mmuuid/79853e54-b09a-4570-8de3-ac8a0fa00bfb">
+      <tags xmi:uuid="mmuuid:1a6b7134-1fdd-442a-8026-77e7859a7363" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:2282d392-be79-49f9-958a-9c884fe78218" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:abd352a9-c315-4913-97df-778f9c16e84a" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:5fd3c732-b868-405f-a7e0-ee42db6eaede" key="id" value="MATVIEW_LOAD_SCRIPT"/>
+      <tags xmi:uuid="mmuuid:c587e628-381b-4bc5-b629-3cbb586c638e" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:a16686ba-fedd-4789-912a-41509f027828" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:133016cb-9738-46d3-aaf6-e46b91fcf3a0" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:711318ac-cdba-4dc2-a9c4-22ed37974e2c" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:4bf7655c-3edc-4739-9938-15cccb5ca6e2" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:8e18ad96-fc3b-4ea0-8c73-7ee6ca0e4821" annotatedObject="mmuuid/2282d392-be79-49f9-958a-9c884fe78218">
+      <tags xmi:uuid="mmuuid:3107d41d-fd25-49dd-bbbf-12d44d483c41" key="en_US" value="Materialize Load Script"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:a36cf038-bf76-4285-b89a-398d3a76cd36" annotatedObject="mmuuid/abd352a9-c315-4913-97df-778f9c16e84a">
+      <tags xmi:uuid="mmuuid:79878576-8032-4718-bdc7-f9ba0bd28aab" key="en_US" value="semi-colon(;) separated DDL/DML commands to run for loading of the cache"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:3e375cb7-802c-431c-8a0f-b4aea7aec19f" annotatedObject="mmuuid/852d58b3-d8b4-4214-82fd-5a08dbb6c639">
+      <tags xmi:uuid="mmuuid:14f0bca9-74fe-4eb5-92a0-d606d533375e" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:707bb67b-892e-41a6-b98c-5ee372d0c12b" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:d148e063-6097-41d8-97b5-3db021464af2" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:e8816553-a8e1-4af9-ba78-ec4beb4d0eb6" key="id" value="MATVIEW_AFTER_LOAD_SCRIPT"/>
+      <tags xmi:uuid="mmuuid:7b709987-4184-4d75-b8d0-3b3f965b5f3a" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:ec9d4a75-f098-4af5-b342-db168b2768ae" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:a8555a0e-8934-4251-8bc8-091ae78e83c2" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:0ec1537a-8de5-48cf-b557-c2563a96c625" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:0358a7b8-ce6a-48ff-9a75-3c480503cf5c" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:538f3edf-d4b6-403b-98ac-332a81268a77" annotatedObject="mmuuid/707bb67b-892e-41a6-b98c-5ee372d0c12b">
+      <tags xmi:uuid="mmuuid:59507d52-88b0-43a5-b9ed-c8772b5c4fc4" key="en_US" value="Materialize After Load Script"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:3eac9e7e-3799-4e1f-bba6-daef9f1715e8" annotatedObject="mmuuid/d148e063-6097-41d8-97b5-3db021464af2">
+      <tags xmi:uuid="mmuuid:f896d1c9-eb48-4024-8d5f-987f5f2b4729" key="en_US" value="semi-colon(;) separated DDL/DML commands to run after the actual load of the cache. &#xa;        &#x9;&#x9;Typically used to rename staging table to actual cache table. Required when MATVIEW_LOAD_SCRIPT not defined to copy &#xa;        &#x9;&#x9;data from teiid_rel:MATVIEW_STAGE_TABLE to MATVIEW table "/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:0834bbbd-3c63-4849-a855-aff299e62265" annotatedObject="mmuuid/96963067-ce56-48a8-99be-4d6526c7ec16">
+      <tags xmi:uuid="mmuuid:e2ac9154-52f6-4042-9aec-f719078ca483" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:3e7b5958-6e96-4455-a416-4dc5d8c645fa" key="allowedValues" value=""/>
+      <tags xmi:uuid="mmuuid:fccb2402-319e-4e15-9a4e-2abee600efd5" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:0664764d-d2c9-404e-bb77-d297ce5c9a03" key="defaultValue" value="NONE"/>
+      <tags xmi:uuid="mmuuid:c0974153-aea2-456b-8d8f-bcda352dd264" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:590fdad8-64c3-4957-ac2d-7d19b2d8d1cd" key="id" value="MATVIEW_SHARE_SCOPE"/>
+      <tags xmi:uuid="mmuuid:c958f560-cbeb-4402-a0ae-3508f4706117" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:852077ad-2e4f-49a7-b0a6-f2f49e9f8c8c" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:a0d9dffa-1655-4b3a-a387-da67012412de" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:0e88a5cd-265b-464e-9794-7efc1fa5cefb" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:e977eb11-e210-49ef-9111-78c9e2f83df9" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:defb3c03-37cc-4a9c-bd5e-c38bcc2100ce" annotatedObject="mmuuid/3e7b5958-6e96-4455-a416-4dc5d8c645fa">
+      <tags xmi:uuid="mmuuid:c7c05832-6108-4c6c-a41c-34ffdf426336" key="SCHEMA" value=""/>
+      <tags xmi:uuid="mmuuid:343f9bd5-dd60-4b5b-bbc3-8786212e7cd4" key="VDB" value=""/>
+      <tags xmi:uuid="mmuuid:a1b0cb09-083a-45ff-a669-af56751b3829" key="NONE" value=""/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:58389edb-487d-4d23-b1af-8382d03203b3" annotatedObject="mmuuid/fccb2402-319e-4e15-9a4e-2abee600efd5">
+      <tags xmi:uuid="mmuuid:154b150c-bfc7-46b6-99e0-616860f134f6" key="en_US" value="Materialized Share Scope"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:95115e6c-cf80-41fd-ab6c-a5f671419a96" annotatedObject="mmuuid/c0974153-aea2-456b-8d8f-bcda352dd264">
+      <tags xmi:uuid="mmuuid:a04e1062-d4c6-4f14-b4a0-d763d764c6b0" key="en_US" value=" &#x9;Allowed values are {NONE, VDB, SCHEMA}, which define if the cached contents are shared among &#xa;        &#x9;&#x9;different VDB versions and different VDBs as long as schema names match "/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:09645aa1-7b2b-420b-8f50-e888cc0b38e2" annotatedObject="mmuuid/afda3a5b-03fc-4455-971d-4cb06bd96b18">
+      <tags xmi:uuid="mmuuid:bc3e0cb3-dbdf-446c-b75c-739ca13622ec" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:8715496d-4edc-4dfc-90e6-a76f88b98db8" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:7d26b7e0-4727-44b5-b138-09b33e7100f2" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:abae1540-c5fb-499f-b982-e37452fdbbb8" key="id" value="MATERIALIZED_STAGE_TABLE"/>
+      <tags xmi:uuid="mmuuid:2b0d04ae-1c86-4fad-8a38-66d0e14f5a60" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:58c59a3b-da69-4d19-9cad-3d66049661dc" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:5ac323f4-86ec-4c7d-a124-c742fd99bb88" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:72a62e8a-a79b-45e9-aff2-7eebd5d4e5f6" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:d7f7c364-e348-4f57-bce8-26a51fa477fb" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:9a1f8ae7-9b1c-4154-a03a-21693dd27bac" annotatedObject="mmuuid/8715496d-4edc-4dfc-90e6-a76f88b98db8">
+      <tags xmi:uuid="mmuuid:c51c223a-ac95-4d85-9473-62e2ca00d278" key="en_US" value="Materialized Staging Table"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:ff6528a9-deec-420c-b9f2-93d3b5a26e4c" annotatedObject="mmuuid/7d26b7e0-4727-44b5-b138-09b33e7100f2">
+      <tags xmi:uuid="mmuuid:e7c4ffd4-189a-47c4-8c28-011b25042742" key="en_US" value="When MATVIEW_LOAD_SCRIPT property not defined, Teiid loads the cache contents &#xa;        &#x9;&#x9;into this table. Required when MATVIEW_LOAD_SCRIPT not defined "/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:789f2338-1e28-456f-96cd-2147579e244e" annotatedObject="mmuuid/101cdc44-6bb3-4875-9bea-bfcf423cde3c">
+      <tags xmi:uuid="mmuuid:c2a719c0-4df4-49bb-97ab-3c93584b71a1" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:67a0f9ce-2e58-47c8-8a72-d5d7b93f247d" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:34a3b41a-44d3-4c9b-b77c-ad5ff91d6a02" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:1ea50305-81b5-4ad4-bd22-6446299ad8ad" key="id" value="ON_VDB_START_SCRIPT"/>
+      <tags xmi:uuid="mmuuid:fba1e2b9-e29f-48a3-81c7-6c2af92ad443" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:aa36e45f-6987-4470-9ba7-fb405950de68" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:3fa9cb14-622d-4f1f-8e35-6f80cea887d8" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:64a6da7e-b071-476d-a485-d79c89444dba" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:77056794-fdd0-46b3-9c33-8fe7fc324d3b" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:a70dc145-3613-4520-a7c8-f548e2b6964b" annotatedObject="mmuuid/67a0f9ce-2e58-47c8-8a72-d5d7b93f247d">
+      <tags xmi:uuid="mmuuid:d9f8a034-92c0-4135-9577-74a6f0da37a4" key="en_US" value="Commands To Run On VDB Start"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:f25c32b0-56b7-4683-8737-c0caeff4bcff" annotatedObject="mmuuid/34a3b41a-44d3-4c9b-b77c-ad5ff91d6a02">
+      <tags xmi:uuid="mmuuid:f1fe512a-baf0-4e5b-afe5-bc3788cd7f1b" key="en_US" value="DML commands to run start of vdb "/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:abbbfd18-9453-447f-995b-f1bede527c7f" annotatedObject="mmuuid/fa9a4d65-2aab-44fe-9fba-b2030be959a0">
+      <tags xmi:uuid="mmuuid:01941041-9b6a-43f3-bec9-3076b6cef4fa" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:b97bc838-6312-42c0-8da5-5a9a5d3d2379" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:02c933ae-f970-400d-8715-65e7cf7e4c75" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:e3a885a9-096b-4836-9049-3ff4136910d7" key="id" value="ON_VDB_DROP_SCRIPT"/>
+      <tags xmi:uuid="mmuuid:a30b6b98-eff9-4e0c-99cf-9c260d903bdb" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:68bfb4e7-438d-423e-a585-b7504f246589" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:a900e352-eed1-4f6e-9c58-6b3b9028f304" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:3788ca4f-58f0-407b-bb40-5d35a471bfb6" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:2c83597b-fc89-461c-9510-c78ba0c77acb" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:32caf903-d503-4747-90c1-fd08205d8ded" annotatedObject="mmuuid/b97bc838-6312-42c0-8da5-5a9a5d3d2379">
+      <tags xmi:uuid="mmuuid:d7fffde0-7864-490c-a92e-1aac648713e4" key="en_US" value="Commands To Run On VDB Drop"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:09d22114-0b85-4c99-b16c-59ee83e57b3d" annotatedObject="mmuuid/02c933ae-f970-400d-8715-65e7cf7e4c75">
+      <tags xmi:uuid="mmuuid:4db5b0f0-6b36-4b8d-9d68-1d07cc4aee35" key="en_US" value="DML commands to run at VDB un-deploy; typically used for cleaning the cache/status tables "/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:b0dd1835-c8c3-4319-a8be-124cd5f44142" annotatedObject="mmuuid/662f9cae-e46a-4f43-bc99-0efaf8e2048f">
+      <tags xmi:uuid="mmuuid:048a3a05-26d1-4017-81aa-c6d58355f131" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:b9a88c5d-080e-47a5-a2c8-f797311e46ee" key="allowedValues" value=""/>
+      <tags xmi:uuid="mmuuid:f00cf7bb-7ce6-4918-9b38-af2790e6a00e" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:143a5e97-6eb5-4a6e-8b38-8901e9f59ac1" key="defaultValue" value="WAIT"/>
+      <tags xmi:uuid="mmuuid:61d1152d-50f7-4a97-86c3-c1c3eb6c809c" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:5841d89c-1461-4fd7-b094-9e7346c1f891" key="id" value="MATVIEW_ONERROR_ACTION"/>
+      <tags xmi:uuid="mmuuid:201cf165-6801-470e-8018-6cd9f490794e" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:c142192f-7740-44d3-b600-78c561f634b0" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:34757229-f7a7-4411-833d-9757b420296b" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:f13a2816-1583-49c9-ae67-b0977b83bfe4" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:77c9efb3-eb34-40e2-9e9b-67f94c76507c" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:df5f2567-8052-4a84-94b3-0539587ad3db" annotatedObject="mmuuid/b9a88c5d-080e-47a5-a2c8-f797311e46ee">
+      <tags xmi:uuid="mmuuid:787e056c-0643-4149-9ba0-6994c98aee60" key="IGNORE" value=""/>
+      <tags xmi:uuid="mmuuid:bcac874d-114e-40f6-a7cc-6cf94880a398" key="WAIT" value=""/>
+      <tags xmi:uuid="mmuuid:170d21c1-c146-4e55-aa53-21c5995fe464" key="THROW_EXCEPTION" value=""/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:0d8f83f3-a7bc-44a5-8215-c691b46b80e9" annotatedObject="mmuuid/f00cf7bb-7ce6-4918-9b38-af2790e6a00e">
+      <tags xmi:uuid="mmuuid:795892c8-7a1f-4b57-9c26-7186bad04bc4" key="en_US" value="Action On Error"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:c34e1d93-540e-422b-8f37-fbedfc4818ff" annotatedObject="mmuuid/61d1152d-50f7-4a97-86c3-c1c3eb6c809c">
+      <tags xmi:uuid="mmuuid:486c81e7-6d17-4b4b-b613-0fe2f006e8e8" key="en_US" value="Action to be taken when mat view contents are requested but cache is invalid. Allowed values are &#xa;        &#x9;(THROW_EXCEPTION = throws an exception, &#xa;        &#x9; IGNORE = ignores the warning and supplied invalidated data, &#xa;        &#x9; WAIT = waits until the data is refreshed and valid then provides the updated data) "/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:3be71a47-2330-47cb-b834-fb3d600d36ba" annotatedObject="mmuuid/72152e95-a69c-4a0c-bc07-107c399104f8">
+      <tags xmi:uuid="mmuuid:a7fe983b-aac7-46cd-beef-068c484efaa7" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:2d4b89e4-3ffa-4137-a6fc-ac207cad86a5" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:ef0e259c-5f2f-407e-b2e8-6a19caefac25" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:e1ab649c-1473-428a-933f-fc6452c52853" key="id" value="MATVIEW_TTL"/>
+      <tags xmi:uuid="mmuuid:fc40d30e-5d1c-43bd-9734-4f6c81127a5b" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:4df2105f-04bf-4619-b368-709f5656ec7b" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:dd2e05b8-db05-4f76-9f84-355808a283a7" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:5e67b6b6-93b0-4cd0-844b-71082588a38b" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:4f61bc7c-e184-4d3f-ab68-93269f131ecc" key="runtimeType" value="integer"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:a907bd49-2c44-4496-8a61-5ae13bb43d2a" annotatedObject="mmuuid/2d4b89e4-3ffa-4137-a6fc-ac207cad86a5">
+      <tags xmi:uuid="mmuuid:ed6e131d-f7fa-4e35-86bb-15fea39f97e4" key="en_US" value="Time To Live (ms)"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:26b725de-db10-4739-b6d0-64dbb17b8ab5" annotatedObject="mmuuid/ef0e259c-5f2f-407e-b2e8-6a19caefac25">
+      <tags xmi:uuid="mmuuid:c55a77b8-62f0-41d9-8b22-cd63480caae6" key="en_US" value="Time to live in milliseconds. Provide property or cache hint on view transformation - property takes precedence. "/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:e909aeab-3eb8-4a96-bfdc-bac960a3a503" annotatedObject="mmuuid/29e16459-3cf1-489d-bfc4-77c33f3286f3">
+      <tags xmi:uuid="mmuuid:e4333283-4d82-466d-86d9-4f02a1354454" key="propertyDefinition:allow-join" value="allow-join"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:1704ed0d-b0cd-4e78-84f0-a9abf759e5be" annotatedObject="mmuuid/e4333283-4d82-466d-86d9-4f02a1354454">
+      <tags xmi:uuid="mmuuid:ce570457-3faf-493a-b530-19d8ff4cda59" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:0f817a74-1333-4541-a515-5265deb99541" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:bd61517d-1b40-4d62-bcb6-d8b81b1f8e84" key="defaultValue" value="true"/>
+      <tags xmi:uuid="mmuuid:8a79e97a-640c-44dc-b4ac-613be243ad10" key="id" value="allow-join"/>
+      <tags xmi:uuid="mmuuid:4f2389d8-722e-4205-8e5b-fe495977c016" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:b4554f2d-7757-4e8d-9c1b-07d73788165b" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:6f005053-e156-41f4-a5ec-3cb8b4a2e905" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:4bff213f-6ee5-4757-8528-b45fee4ab406" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:80da3a19-c2f6-4fc4-b9a1-b53994598be1" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:4c6af0b9-69ea-4599-92be-cb06b85ad606" annotatedObject="mmuuid/0f817a74-1333-4541-a515-5265deb99541">
+      <tags xmi:uuid="mmuuid:1863a54c-ecb1-4ded-9f9b-3a2e1e9f2d52" key="en" value="Allow Join"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:52d3fb99-a80c-4b4e-a025-74feb15ff046" annotatedObject="mmuuid/1801ca36-8717-47a7-b795-044a45c9518e">
+      <tags xmi:uuid="mmuuid:02c5133d-2c17-46af-b620-4abf320c6fe9" key="propertyDefinition:native_type" value="native_type"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:e5f3b4b7-6f27-49e3-9568-983d02f3adc0" annotatedObject="mmuuid/02c5133d-2c17-46af-b620-4abf320c6fe9">
+      <tags xmi:uuid="mmuuid:76894495-d320-451a-8636-d7717fe7f270" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:5f8b3ddb-3f72-4ea1-8f94-2492c7c64243" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:f952abc2-8ade-48ba-bfda-ac83a7d1cb63" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:b18fade6-ef7f-424c-8656-0085e8363aaf" key="id" value="native_type"/>
+      <tags xmi:uuid="mmuuid:e758759c-e760-4aad-b305-960cdd607042" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:b05a2431-1f45-4d94-8546-57fe0bccd4b8" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:f90f9fbf-5a6f-45d1-b8d7-8190db46a186" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:396d7f73-8b10-4a2d-893e-f14c4a320140" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:4f7413de-7b8e-4c23-b879-3e5c96628b3e" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:6c9268ea-4c37-45a6-b855-ca7bf512b361" annotatedObject="mmuuid/5f8b3ddb-3f72-4ea1-8f94-2492c7c64243">
+      <tags xmi:uuid="mmuuid:7d050769-c97a-482c-804a-e4fba2ce5ced" key="en" value="Native Type"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:c1512dbc-de21-47b0-bfd6-e5fbf177aa77" annotatedObject="mmuuid/f952abc2-8ade-48ba-bfda-ac83a7d1cb63">
+      <tags xmi:uuid="mmuuid:d86b4e79-3bac-48d4-9db9-344fb1d6bbb5" key="en" value="Allows specifying a native type for OUT parameters. Typical value is REF CURSOR"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:7ecbdc38-d1cd-425f-8f48-a335fa28193b" annotatedObject="mmuuid/2fe2d875-ec89-458b-96df-324d153c60a5">
+      <tags xmi:uuid="mmuuid:e1c64ae2-e2d4-468c-84e8-5bf19eafb357" key="metamodel" value="http://www.metamatrix.com/metamodels/Relational"/>
+      <tags xmi:uuid="mmuuid:358d1952-4a9a-4247-a739-0bd59751aee9" key="namespacePrefix" value="REST"/>
+      <tags xmi:uuid="mmuuid:b45ab355-3f2c-4004-a0f8-cede9e4f2b94" key="namespaceUri" value="http://teiid.org/rest"/>
+      <tags xmi:uuid="mmuuid:deb4d42b-243b-4443-b352-7d294bce8842" key="version" value="2"/>
+      <tags xmi:uuid="mmuuid:349d9c70-7eef-4283-aade-3083d4d4160b" key="description" value="REST extended virtual procedure properties"/>
+      <tags xmi:uuid="mmuuid:87a39ef0-6de8-4221-a9f5-1890ecf5b589" key="modelTypes" value=""/>
+      <tags xmi:uuid="mmuuid:62468d40-d8bd-471d-84e9-fa5403a9718a" key="extendedMetaclass:org.teiid.designer.metamodels.relational.impl.ProcedureImpl" value="org.teiid.designer.metamodels.relational.impl.ProcedureImpl"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:30bacb20-18e0-469b-8f95-4298f7ec062d" annotatedObject="mmuuid/87a39ef0-6de8-4221-a9f5-1890ecf5b589">
+      <tags xmi:uuid="mmuuid:0e23e41c-608e-4114-ac6f-bffd7599fe63" key="VIRTUAL" value=""/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:422ad495-426f-4ae9-9475-9ec024ca500d" annotatedObject="mmuuid/62468d40-d8bd-471d-84e9-fa5403a9718a">
+      <tags xmi:uuid="mmuuid:7fbad434-0a1b-4100-9c4f-444d27f5a420" key="propertyDefinition:charset" value="charset"/>
+      <tags xmi:uuid="mmuuid:46d527a2-27ba-42ad-9980-eae4164456e4" key="propertyDefinition:headers" value="headers"/>
+      <tags xmi:uuid="mmuuid:555c6961-0cae-4d74-a44a-9241434b0564" key="propertyDefinition:METHOD" value="METHOD"/>
+      <tags xmi:uuid="mmuuid:dd55765b-9341-43ec-ba87-a5a25f1f03b0" key="propertyDefinition:URI" value="URI"/>
+      <tags xmi:uuid="mmuuid:414ee0b6-cde4-4add-a47a-3f5e85655fec" key="propertyDefinition:DESCRIPTION" value="DESCRIPTION"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:0dbd2b5d-37bc-4580-bef3-d90f847b44ba" annotatedObject="mmuuid/7fbad434-0a1b-4100-9c4f-444d27f5a420">
+      <tags xmi:uuid="mmuuid:84ebd7de-9daa-4d11-b27c-90e1bb1eca78" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:b02b8259-38d1-496c-ad26-1f191cb5f83f" key="allowedValues" value=""/>
+      <tags xmi:uuid="mmuuid:0de1216c-e856-41f1-9ac2-9fd1b171ecae" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:ad876a71-3401-49d7-8858-5126661f5304" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:736c15ac-017a-4a3d-a10e-742336a87291" key="id" value="charset"/>
+      <tags xmi:uuid="mmuuid:1c8635ed-a846-4335-9bd8-516f4088e81d" key="index" value="false"/>
+      <tags xmi:uuid="mmuuid:09b7dd4c-e302-4799-9e9b-8056ac91b134" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:64f1c9c8-6f6c-4999-ad3e-ed479ac9078e" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:6099c2ac-8925-4a54-96e2-5548b67b1314" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:9ee490d9-a72e-48c3-8338-745bc44b710f" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:f5c3b944-5af4-4671-9c1c-0d4d1cff8b81" annotatedObject="mmuuid/b02b8259-38d1-496c-ad26-1f191cb5f83f">
+      <tags xmi:uuid="mmuuid:f6081093-acfd-4a27-b2e6-23c924acbc0f" key=" " value=""/>
+      <tags xmi:uuid="mmuuid:daf8c0f5-99f0-4970-bffd-09c1779dfc1e" key="UTF-8" value=""/>
+      <tags xmi:uuid="mmuuid:ca94eb5f-5c78-48f4-b1e7-eca82e449a98" key="US-ASCII" value=""/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:9a3f0757-58c9-44cf-9c85-efaecccda6cb" annotatedObject="mmuuid/0de1216c-e856-41f1-9ac2-9fd1b171ecae">
+      <tags xmi:uuid="mmuuid:a3572947-891c-41a9-b18b-526e4650e2ef" key="en_US" value="CHARSET"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:7e75f811-dece-4cfc-a6e5-4e37104c0596" annotatedObject="mmuuid/ad876a71-3401-49d7-8858-5126661f5304">
+      <tags xmi:uuid="mmuuid:2b11d18e-74c8-4964-8bea-96f81471ac12" key="en_US" value="Optional property for procedures that return a Blob with content type that is text-based. This character set to used to convert the data. "/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:1bba307f-156e-49d0-bf85-6d59737835a3" annotatedObject="mmuuid/46d527a2-27ba-42ad-9980-eae4164456e4">
+      <tags xmi:uuid="mmuuid:19fd2e92-f3a7-4b61-84e7-a8921f71828d" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:5dabc18c-e056-4272-b5d0-f2584a176110" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:d5ceeb5e-eeb1-402f-8c37-51f7c8a279c3" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:624d2bd5-e046-4f9f-9440-362b607d3c17" key="id" value="headers"/>
+      <tags xmi:uuid="mmuuid:e69b86ac-66f1-4836-bd52-c2b83a7a678d" key="index" value="false"/>
+      <tags xmi:uuid="mmuuid:4bb38ce8-8fec-4fe1-8fc7-62d5d5227e77" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:1a025fda-ee60-44fe-9fc9-511eda169322" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:ec241557-5f1d-41db-8f07-b347a98110b9" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:4feab161-64b3-48f1-af8f-0b3d9f1d7585" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:82122517-546e-45a2-b52c-5f8c9b828d25" annotatedObject="mmuuid/5dabc18c-e056-4272-b5d0-f2584a176110">
+      <tags xmi:uuid="mmuuid:e1338aa0-4f43-4dbd-a67d-d721456ec0de" key="en_US" value="HEADERS"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:a6e4d03f-0140-4011-a3fc-0810a9d47b68" annotatedObject="mmuuid/d5ceeb5e-eeb1-402f-8c37-51f7c8a279c3">
+      <tags xmi:uuid="mmuuid:1f5c73e7-608f-4bb3-bfdf-6351017bcbb1" key="en_US" value="Semi-colon delimited list of HTTP Header parameters to pass into the REST service operation. Ex. header1;header2;etc. These value will be passed into the procedure first."/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:fd8e4a2d-6d6c-4018-abb6-ca04adc42ade" annotatedObject="mmuuid/555c6961-0cae-4d74-a44a-9241434b0564">
+      <tags xmi:uuid="mmuuid:db041761-6abf-4cef-b0dc-a2fde8ec0fdc" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:81e8b3f9-feea-4d28-a2ab-8bb428c32074" key="allowedValues" value=""/>
+      <tags xmi:uuid="mmuuid:6679358a-6270-4b9c-98d9-1890b9c764ac" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:0503209e-9527-49be-8738-f34b98fd5099" key="defaultValue" value=" "/>
+      <tags xmi:uuid="mmuuid:f4398f4b-72a2-4bf0-be20-0c8543d59027" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:2fd55043-4b5c-4e66-868f-df95b73736bb" key="id" value="METHOD"/>
+      <tags xmi:uuid="mmuuid:e3dc4edc-a607-4475-a9dd-cf7f4ee4975f" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:2c7c8458-fa86-4f51-84d7-999695e45a89" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:2ed5d3f1-c23e-4e78-8de4-636935141440" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:24aa531b-30f8-4767-89df-9b8898debaa5" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:a1164fa4-3b4f-4f97-82a6-d83b1abfd957" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:91160d58-ef1f-4105-b67b-5bc88c51c449" annotatedObject="mmuuid/81e8b3f9-feea-4d28-a2ab-8bb428c32074">
+      <tags xmi:uuid="mmuuid:56c4f708-ef03-452a-b803-3132a81ed27b" key=" " value=""/>
+      <tags xmi:uuid="mmuuid:24289522-cbed-47a0-8517-41736ceb649a" key="DELETE" value=""/>
+      <tags xmi:uuid="mmuuid:f842b5fc-6f91-43e8-a8b2-9a5f262751c7" key="POST" value=""/>
+      <tags xmi:uuid="mmuuid:5497f1dd-d4aa-491f-a12c-507b414d393d" key="GET" value=""/>
+      <tags xmi:uuid="mmuuid:b35892d6-3a0b-41c0-8a55-3d77e14b3101" key="PUT" value=""/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:aef88db6-0648-4228-9aea-692951b7d4c1" annotatedObject="mmuuid/6679358a-6270-4b9c-98d9-1890b9c764ac">
+      <tags xmi:uuid="mmuuid:69d41a4a-ad83-436f-9b3b-b4c6164408f9" key="en_US" value="Rest Method"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:fe8e2e6f-e8b9-414a-921d-ea1546b3d15e" annotatedObject="mmuuid/f4398f4b-72a2-4bf0-be20-0c8543d59027">
+      <tags xmi:uuid="mmuuid:5d726f3f-678f-44b4-aa0d-df75326c4280" key="en_US" value="The REST method to map this procedure to. Supported methods are&#xa;&#x9;&#x9;&#x9;&#x9;GET/PUT/POST/DELETE."/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:53b282cd-c526-418b-a8e3-a64d0b6b634b" annotatedObject="mmuuid/dd55765b-9341-43ec-ba87-a5a25f1f03b0">
+      <tags xmi:uuid="mmuuid:5d485b1b-3ebb-4b5b-a69e-7aa17d6725be" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:5fd2520e-36bb-4ead-8b4e-a20c3ce2a178" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:51007be5-5f7e-4adf-b2f1-5f4b7279bce1" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:629f72c9-2df9-49c1-8890-e7fa1fbebfb4" key="id" value="URI"/>
+      <tags xmi:uuid="mmuuid:daff6dbd-2224-4b7b-a545-41f8c7c3377e" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:51e518c6-89ca-44e0-9423-e08a1afe2cdf" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:7cf4e66a-4abd-468d-9e19-93eaed4763c9" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:97006d4c-9831-4168-bd16-8e0e653c52ce" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:a1be8086-b382-41c7-b329-69a946fd3841" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:c346732c-3d9c-4214-ab9a-afafa9b3e204" annotatedObject="mmuuid/5fd2520e-36bb-4ead-8b4e-a20c3ce2a178">
+      <tags xmi:uuid="mmuuid:052ebb18-5e62-468e-8ed6-55cae1e33087" key="en_US" value="URI"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:3b726b93-984d-4633-82fc-41745a24c723" annotatedObject="mmuuid/51007be5-5f7e-4adf-b2f1-5f4b7279bce1">
+      <tags xmi:uuid="mmuuid:84a30d55-903e-447d-b52a-dd7d2713f2c6" key="en_US" value="The relative URI to map this procedure to."/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:fcbb4b5b-6811-477e-aafb-cce4f34d3d6f" annotatedObject="mmuuid/414ee0b6-cde4-4add-a47a-3f5e85655fec">
+      <tags xmi:uuid="mmuuid:3f325641-4cc6-4920-ad9f-d230c7afa199" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:d33ae608-505b-4fe7-8ea6-42f6da913fc2" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:bac85512-89ea-41a4-a61a-ea226dc0a249" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:4aa7125b-8f62-4f15-a5a6-369eefbd9385" key="id" value="DESCRIPTION"/>
+      <tags xmi:uuid="mmuuid:094f22e3-f096-4a5b-a929-51f03ce525d9" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:3d116415-e65d-4a95-a4b1-0a00db26bad8" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:cf4cf4be-44fd-4c8e-aa68-ed27f1cfbd3d" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:b08ff37b-e0ba-4f56-9cdc-8fa2313340a1" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:44f9767d-9f45-4950-922b-007e1808f38a" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:50af0c36-7898-4688-8bf0-a6fdcfb25728" annotatedObject="mmuuid/d33ae608-505b-4fe7-8ea6-42f6da913fc2">
+      <tags xmi:uuid="mmuuid:429d09cf-2747-41c2-bf05-388f7b9c40c8" key="en_US" value="Description"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:cff5f26b-7a19-483c-9f9c-c7807cca8330" annotatedObject="mmuuid/bac85512-89ea-41a4-a61a-ea226dc0a249">
+      <tags xmi:uuid="mmuuid:b44d9c42-abdc-40e5-8ffe-6ef3fde0e58b" key="en_US" value="The description of this procedure."/>
+    </annotations>
+  </mmcore:AnnotationContainer>
+  <relational:BaseTable xmi:uuid="mmuuid:e8634ce1-32a4-4070-9721-5fe28523cc8d" name="MoneyTransfer">
+    <columns xmi:uuid="mmuuid:c99fb8dd-e1a2-4882-99ac-0943a00bd9c9" name="code" length="30" radix="0" uniqueKeys="mmuuid/ac5d43cf-3e17-4f76-babc-60537052ea98">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:80ed6375-4a4f-41a4-aace-b090e394c059" name="sender_name" length="60" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dcc7ed49-3370-4fb5-a927-95a022ed4e39" name="receiver_name" length="60" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dad9a049-02b9-4502-9799-c25ad9da0560" name="country_from" length="30" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:afde3724-65ab-41f8-9f0d-0a3ec185bae5" name="country_to" length="30" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f8eaf217-152a-4ef6-a1d7-c8cfd7c506d0" name="status" length="10" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e8010dd4-2fe5-4171-a768-f476d3929ac3" name="amount_sent_without_taxes" length="10" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:198a2cf3-eb44-4172-a313-b25d1f895114" name="sending_currency" length="5" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e57b3243-9dce-4e6d-a839-85607f6a4361" name="sending_date" length="20" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#date"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e930598b-3a27-4b10-81b2-935791641fea" name="amount_to_receive">
+      <type href="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:49043695-cfb8-41ed-8872-5327133798f1" name="fees" length="10" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:555bc298-3b22-405e-a445-bfa2556ffd30" name="vat">
+      <type href="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d30b9c9d-55ef-4d7f-ab61-fa8ea5e73236" name="amount_paid_with_taxes" length="10" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:02c14903-82c6-4f33-831b-75bd45d72445" name="receiving_currency" length="5">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:09843d6f-0e39-4947-9ea2-844d8ce947b9" name="receiving_date" length="20" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#date"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:ac5d43cf-3e17-4f76-babc-60537052ea98" name="PRIMARY" columns="mmuuid/c99fb8dd-e1a2-4882-99ac-0943a00bd9c9"/>
+  </relational:BaseTable>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:a456394d-61fb-441c-92b6-d6afd16b7c74">
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:304b57f8-971c-4e9b-a11d-d475e6d29536" outputs="mmuuid/e8634ce1-32a4-4070-9721-5fe28523cc8d" target="mmuuid/e8634ce1-32a4-4070-9721-5fe28523cc8d">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:71152083-06c0-4fbf-a14a-2a3253b0230d">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:ff3aca78-395e-4e8b-b06d-b9fa16c75b63" selectSql="SELECT money.keycode AS code, CONCAT(sender.firstname, CONCAT(' ', sender.lastname)) AS sender_name, CONCAT(receiver.firstname, CONCAT(' ', receiver.lastname)) AS receiver_name, sender.country AS country_from, receiver.country AS country_to, money.status AS status, money.amount_hf_sender_cur AS amount_sent_without_taxes, money.sender_currency AS sending_currency, money.sending_date AS sending_date, money.amount_hf_receiver_cur AS amount_to_receive, money.fees AS fees, money.vat AS vat, money.total_ttc AS amount_paid_with_taxes, money.receiver_currency AS receiving_currency, money.withdrawal_gdate AS receiving_date FROM EU_Transactions.eu_customer AS receiver, EU_Transactions.eu_moneytransfer AS money, EU_Transactions.eu_customer AS sender WHERE (receiver.id = money.receiver_id) AND (sender.id = money.sender_id)"/>
+        <aliases xmi:uuid="mmuuid:86a0605b-606d-47e1-a2f0-43f5755808b1" alias="sender">
+          <aliasedObject href="../DataSources/EU_Transactions.xmi#mmuuid/c9c48045-aa5e-458b-820d-d0cc49b59211"/>
+        </aliases>
+        <aliases xmi:uuid="mmuuid:77a2bf44-1315-4298-ac8e-baa97a08d547" alias="receiver">
+          <aliasedObject href="../DataSources/EU_Transactions.xmi#mmuuid/c9c48045-aa5e-458b-820d-d0cc49b59211"/>
+        </aliases>
+        <aliases xmi:uuid="mmuuid:bedee4ec-b946-4501-813a-8631898a2d4b" alias="money">
+          <aliasedObject href="../DataSources/EU_Transactions.xmi#mmuuid/a9f3129b-2585-43e6-aad6-5bb13b9b74b6"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:ae9fa09e-ae20-4d33-ab48-bcacbcce0ed5" outputs="mmuuid/c99fb8dd-e1a2-4882-99ac-0943a00bd9c9">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/25fdf454-b27d-45e5-8771-7e62ee4b04fd"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:322b2c87-18db-4773-a003-a4ddca241648" outputs="mmuuid/80ed6375-4a4f-41a4-aace-b090e394c059">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/fd11a19c-8b63-4b06-a83d-3ac3b0bb0798"/>
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/846a0dbd-3b30-479d-be96-6bf148f09b12"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:319a4a8b-0cc8-45cb-8a47-d65f82289a0d" outputs="mmuuid/dcc7ed49-3370-4fb5-a927-95a022ed4e39">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/846a0dbd-3b30-479d-be96-6bf148f09b12"/>
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/fd11a19c-8b63-4b06-a83d-3ac3b0bb0798"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:d34e3487-48c5-4b40-9221-23e3014d68e6" outputs="mmuuid/dad9a049-02b9-4502-9799-c25ad9da0560">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/f793e334-c476-4334-bf40-35b49a208887"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:bd0e8c25-40ac-4020-945b-2eff0da4bec5" outputs="mmuuid/afde3724-65ab-41f8-9f0d-0a3ec185bae5">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/f793e334-c476-4334-bf40-35b49a208887"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:01c4b535-7e3e-4e3c-b33d-b92fcf174ec8" outputs="mmuuid/f8eaf217-152a-4ef6-a1d7-c8cfd7c506d0">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/d9d372e8-031b-47d6-b77b-105a21649082"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:d6194247-3bb4-44f1-b57f-ed2b335998e7" outputs="mmuuid/e57b3243-9dce-4e6d-a839-85607f6a4361">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/51c50946-20af-4b6b-832b-5a8464c48d0e"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:a542fe7a-b6aa-458e-a352-5682ea11e192" outputs="mmuuid/09843d6f-0e39-4947-9ea2-844d8ce947b9">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/1beb11d5-0ebb-4338-8f20-1d1c260f4e8c"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:43a9bd17-eaec-40e4-a45a-693485a548aa" outputs="mmuuid/e8010dd4-2fe5-4171-a768-f476d3929ac3">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/d948f11c-61f7-438e-ad8d-ad92b11fac88"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:a85f8c35-eff6-4a0b-bc68-7a93230efd5f" outputs="mmuuid/d30b9c9d-55ef-4d7f-ab61-fa8ea5e73236">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/67fb0872-a3b2-4956-a303-770a11769f40"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:4c8a33f2-10a3-4404-86ac-b8b95c31026d" outputs="mmuuid/198a2cf3-eb44-4172-a313-b25d1f895114">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/cb9ecdf5-1abf-489f-83de-9eaeb2d66145"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:3fcf1295-a828-4a83-968f-2c2ac57dd5fc" outputs="mmuuid/49043695-cfb8-41ed-8872-5327133798f1">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/bd7e1b95-8639-4311-9148-86338cbba3ce"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:94a35f0a-260b-4b4b-a529-455214acaf4d" outputs="mmuuid/555bc298-3b22-405e-a445-bfa2556ffd30">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/da80f7cd-0ed8-43dc-b8d4-78d68230ccb5"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:5afd77ae-5ade-47bd-8ac2-54d94c1e520f" outputs="mmuuid/02c14903-82c6-4f33-831b-75bd45d72445">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/38cc40be-5a6b-45e1-9122-118b9eb7d74c"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:7e9345b9-dbfa-48af-9a0e-789ec4fcd8d4" outputs="mmuuid/e930598b-3a27-4b10-81b2-935791641fea">
+        <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/d576d7a1-d8f8-4d68-96ac-20dd0a57ebdf"/>
+      </nested>
+      <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/c9c48045-aa5e-458b-820d-d0cc49b59211"/>
+      <inputs href="../DataSources/EU_Transactions.xmi#mmuuid/a9f3129b-2585-43e6-aad6-5bb13b9b74b6"/>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+</xmi:XMI>

@@ -1,0 +1,15 @@
+<infinispan>
+
+<jgroups>
+     <stack-file name="external-file" path="jgroups.xml"/>
+  </jgroups>
+  
+   <cache-container default-cache="local">
+      <transport cluster="mycluster"/>
+      <local-cache name="local"/>
+      <invalidation-cache name="invalidation" mode="SYNC"/>
+      <replicated-cache name="repl-sync" mode="SYNC"/>
+      <distributed-cache name="beosbank-dist" mode="SYNC"/>
+   </cache-container>
+</infinispan>
+

@@ -1,0 +1,8 @@
+mysqldump  -u root beosbank-mt  > schema.sql
+docker build -t "jbdeg/beosbank-mt-db" .
+
+#Start the beosbank-mt-db container
+docker run -d -p 3406:3306 jbdeg/beosbank-mt-db
+
+#Connect to the container MySQL Server
+mysql -h 127.0.0.1 -P 3406 -u root --password=Root01#

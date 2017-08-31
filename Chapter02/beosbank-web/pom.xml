@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.beosbank.jbdevg.jbossas</groupId>
+    <artifactId>jbossas</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>beosbank-web</artifactId>
+  <packaging>war</packaging>
+  <name>beosbank-web</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+
+
+  <dependency>
+  	<groupId>org.jboss.spec.javax.ejb</groupId>
+  	<artifactId>jboss-ejb-api_3.1_spec</artifactId>
+  	<version>1.0.2.Final</version>
+  	<scope>provided</scope>
+  </dependency>
+  
+ <dependency>
+    <groupId>org.jboss.spec.javax.annotation</groupId>
+    <artifactId>jboss-annotations-api_1.1_spec</artifactId>
+    <version>1.0.1.Final</version>
+    <scope>provided</scope>
+</dependency>
+  
+  <dependency>
+  	<groupId>org.jboss.ejb3</groupId>
+  	<artifactId>jboss-ejb3-ext-api</artifactId>
+  	<version>2.2.0.Final</version>
+  	<scope>provided</scope>
+  </dependency>
+  <dependency>
+  	<groupId>javax.enterprise</groupId>
+  	<artifactId>cdi-api</artifactId>
+  	<version>2.0-PFD</version>
+  	<scope>provided</scope>
+  </dependency>
+  <dependency>
+  	<groupId>org.jboss.spec.javax.servlet</groupId>
+  	<artifactId>jboss-servlet-api_3.1_spec</artifactId>
+  	<version>1.0.0.Final</version>
+  	<scope>provided</scope>
+  </dependency>
+  <dependency>
+  	<groupId>org.jboss.spec.javax.faces</groupId>
+  	<artifactId>jboss-jsf-api_2.1_spec</artifactId>
+  	<version>2.1.29.1.Final</version>
+  	<scope>provided</scope>
+  </dependency>
+  
+  <!-- Wizard component -->
+<dependency>
+    <groupId>org.primefaces</groupId>
+    <artifactId>primefaces</artifactId>
+    <version>6.0</version>
+</dependency>
+
+
+ <!-- Core model-->
+<dependency>
+    <groupId>com.beosbank.jbdevg.jbossas</groupId>
+    <artifactId>beosbank-core</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</dependency>
+
+
+  </dependencies>
+  
+  
+  <build>
+  
+  	<plugins>
+            <plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>7.9.Final</version>
+                <configuration>
+                	<hostname>127.0.0.1</hostname>
+                	<port>9999</port>
+                    <domain>
+                        <server-groups>
+                            <server-group>dev03</server-group>
+                        </server-groups>
+                    </domain>
+                </configuration>
+            </plugin>
+        </plugins>
+        
+    <finalName>beosbank-web</finalName>
+  </build>
+  <description>BeosBank Money Transfer Web App
+Clustering demo</description>
+</project>

@@ -1,0 +1,19 @@
+
+<form id="1054117117">
+<property name="name" value="beosbank-bpms-withdrawal.WithdrawalParentProcess-taskform.form"/>
+<property name="displayMode" value="aligned"/>
+<property name="labelMode" value="left"/>
+<property name="status" value="0"/>
+<field position="0" name="withdrawalForm_claimReference" type="InputText" id="1582243898">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;Transaction Reference to collectquot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="false"/>
+<property name="isHTML" value="false"/>
+<property name="hideContent" value="false"/>
+<property name="outputBinding" value="withdrawalForm/claimReference"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<dataHolder inputId="" name="#E9E371" type="dataModelerEntry" outId="withdrawalForm" value="com.beosbank.jbdevg.bpms.WithdrawalRequest" id="withdrawalForm"/>
+</form>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jboss-web>
+ <security-domain>beosbank-web-policy</security-domain> 
+<!--
+security-domain>beosbank-web-policy-custom</security-domain>
+-->
+</jboss-web>

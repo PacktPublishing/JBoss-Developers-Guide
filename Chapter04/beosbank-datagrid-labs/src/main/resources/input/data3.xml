@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MoneyTransferStream>
+<moneytransfer>
+  <amountExcludingFees>1500</amountExcludingFees>
+  <amountExcludingFeesInReceiverCurrency>750000</amountExcludingFeesInReceiverCurrency>
+  <amountIncludingFees/>
+  <creditCardNumber>1111-2222-3333-4444</creditCardNumber>
+  <fees>25.00</fees>
+  <id>3</id>
+  <keyCode>TRXa3m</keyCode>
+  <receiver>
+    <address>
+      <city>Douala</city>
+      <country>Cameroon</country>
+      <street>Bld Liberté</street>
+      <zipcode>1103</zipcode>
+    </address>
+    <birthDate>1984-04-06</birthDate>
+    <firstName>Baba</firstName>
+    <id>4</id>
+    <lastName>Ahmadou</lastName>
+  </receiver>
+  <receiverCurrencyCode>XAF</receiverCurrencyCode>
+  <sender>
+    <address>
+      <city>Chicago</city>
+      <country>USA</country>
+      <street>Kenedy Avenue</street>
+      <zipcode/>
+    </address>
+    <birthDate>1950-03-03</birthDate>
+    <firstName>John</firstName>
+    <id>5</id>
+    <lastName>Doe</lastName>
+  </sender>
+  <senderCurrencyCode>USD</senderCurrencyCode>
+  <sendingDate>2017-04-11</sendingDate>
+  <status>DRAFT</status>
+  <totalAmountExcludingVat>1505</totalAmountExcludingVat>
+  <totalAmountIncludingVat>1677.50</totalAmountIncludingVat>
+  <vatRate>10</vatRate>
+  <withdrawalDate/>
+</moneytransfer>
+</MoneyTransferStream>

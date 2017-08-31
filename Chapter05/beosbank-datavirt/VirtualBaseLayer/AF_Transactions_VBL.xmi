@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:375e5b81-385b-42b2-a525-ab2676f18e58" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="11.0.1.Final-v20170208-2046-B4143">
+    <modelImports xmi:uuid="mmuuid:91b7e8ba-31b8-49d9-a033-e654888f0c58" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:3025773b-4922-4d92-bb35-53c722a97cd8" name="AF_Transactions" modelLocation="../DataSources/AF_Transactions.xmi" uuid="mmuuid:b4fff8d4-24b8-4119-8aaf-3809b1451d1b" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+  </mmcore:ModelAnnotation>
+  <relational:BaseTable xmi:uuid="mmuuid:585ee209-ed3b-46f6-8c98-8ce6d7bd9cea" name="MoneyTransfer">
+    <columns xmi:uuid="mmuuid:1340fb93-6a20-4fd1-bfed-9f8b35c9179c" name="code" length="30" radix="0" uniqueKeys="mmuuid/11e93a6a-cba8-4e5f-a8f5-8d4a7539c10a">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e4d771f6-5d8a-4c3c-9882-36adfaca8f25" name="sender_name" length="60" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:efca9809-4473-4fec-b7ee-c2d815fabb0e" name="receiver_name" length="60" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9077e12c-e0c0-4f76-a8df-f847bc9ebe7d" name="country_to" length="30" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d2120328-58bb-4601-93da-8343fd566bb2" name="country_from" length="30" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:7dc6c58a-b2de-48da-bc42-c33f81f0ddc0" name="status" length="10" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a6e64d83-fb82-4425-a823-b13e6df6c7fc" name="amount_sent_without_taxes" length="10" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:792253a8-2c2e-4330-832e-25b4ccdc2773" name="sending_currency" length="5" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4be974b9-519d-4381-bb1b-463cb721907d" name="sending_date" length="20" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#date"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f8cf6c62-2f6d-41a6-bdc1-9a576a35f472" name="amount_to_receive">
+      <type href="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f00c17f4-8410-40c4-8e5a-e9a6ca4afdd5" name="fees" length="10" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:171498a3-6942-4722-97e1-ce294fc6d945" name="vat">
+      <type href="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4eb29b4e-2d81-4117-aaa4-62133a574afe" name="amount_paid_with_taxes" length="10" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:84e74331-5f50-48d1-8159-9d4e7afbf775" name="receiving_currency" length="5">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:79fd756a-0ceb-4b72-bc09-5ef9bfa90518" name="receiving_date" length="20" radix="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#date"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:11e93a6a-cba8-4e5f-a8f5-8d4a7539c10a" name="PRIMARY" columns="mmuuid/1340fb93-6a20-4fd1-bfed-9f8b35c9179c"/>
+  </relational:BaseTable>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:0cc8e51c-f818-42ae-a2f6-472a493e93c6">
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:d39228af-9fc7-41cb-a2e7-7af58f5430a5" outputs="mmuuid/585ee209-ed3b-46f6-8c98-8ce6d7bd9cea" target="mmuuid/585ee209-ed3b-46f6-8c98-8ce6d7bd9cea">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:02813f39-cef7-4ca5-98fd-1a38554e097d">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:16fac054-13f7-4327-84be-bbc375b8fbed" selectSql="SELECT money.KEYCODE AS code, CONCAT(sender.SURNAME, CONCAT('  ', CONCAT(sender.FIRSTNAME, CONCAT(' ', sender.LASTNAME)))) AS sender_name, CONCAT(receiver.FIRSTNAME, CONCAT(' ', receiver.LASTNAME)) AS receiver_name, receiver.COUNTRY AS country_to, sender.COUNTRY AS country_from, money.status AS status, money.AMOUNT_HF_SENDER_CUR AS amount_sent_without_taxes, money.SENDER_CURRENCY AS sending_currency, money.SENDING_DATE AS sending_date, money.AMOUNT_HF_RECEIVER_CUR AS amount_to_receive, money.FEES AS fees, money.VAT AS vat, money.TOTAL_TTC AS amount_paid_with_taxes, money.RECEIVER_CURRENCY AS receiving_currency, money.WITHDRAWAL_GDATE AS receiving_date FROM AF_Transactions.AF_CUSTOMER AS receiver, AF_Transactions.AF_MONEYTRANSFER AS money, AF_Transactions.AF_CUSTOMER AS sender WHERE (receiver.ID = money.RECEIVER_ID) AND (sender.ID = money.SENDER_ID)"/>
+        <aliases xmi:uuid="mmuuid:b4bf020a-ed70-490d-8c0e-d5979a23a043" alias="sender">
+          <aliasedObject href="../DataSources/AF_Transactions.xmi#mmuuid/4aab19fe-0fc5-4011-ac26-ca971145d785"/>
+        </aliases>
+        <aliases xmi:uuid="mmuuid:9351d902-c43e-444f-8a8c-b48f9892153b" alias="receiver">
+          <aliasedObject href="../DataSources/AF_Transactions.xmi#mmuuid/4aab19fe-0fc5-4011-ac26-ca971145d785"/>
+        </aliases>
+        <aliases xmi:uuid="mmuuid:4c654c55-ff48-4589-90e2-ec91dc11d1f3" alias="money">
+          <aliasedObject href="../DataSources/AF_Transactions.xmi#mmuuid/1b8fb97b-429f-4952-93bf-bf440434354c"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:156228c9-f44b-4b98-a8a9-6aa81f4fbe7c" outputs="mmuuid/1340fb93-6a20-4fd1-bfed-9f8b35c9179c">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/21a3d12c-61cc-43b5-9887-e5b0cf1555fc"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:11e46235-9115-41ca-b434-84bb82d4b721" outputs="mmuuid/e4d771f6-5d8a-4c3c-9882-36adfaca8f25">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/2aea00cd-0375-4d38-b358-1d3098a846e2"/>
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/45495462-0322-43da-9e33-cfb166a85a37"/>
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/ffb613b3-5658-461c-a837-1361af0766c6"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:46d53eb3-c014-4104-8518-573dff5e1c0b" outputs="mmuuid/efca9809-4473-4fec-b7ee-c2d815fabb0e">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/2aea00cd-0375-4d38-b358-1d3098a846e2"/>
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/45495462-0322-43da-9e33-cfb166a85a37"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:18cfe43b-45c3-4ed1-bbad-fbbeba97f24d" outputs="mmuuid/d2120328-58bb-4601-93da-8343fd566bb2">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/08c9445d-9f18-42ed-8267-f65ab459fc90"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:9ef52817-ca7e-48e2-97e6-af9b1b034367" outputs="mmuuid/9077e12c-e0c0-4f76-a8df-f847bc9ebe7d">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/08c9445d-9f18-42ed-8267-f65ab459fc90"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f32b843c-e2bb-46dd-980e-2d693c24bcc0" outputs="mmuuid/7dc6c58a-b2de-48da-bc42-c33f81f0ddc0">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/ed412572-7a75-4cdf-b829-6691d32f320c"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:d30b14de-0757-4b9a-b6fa-b2cf647006e4" outputs="mmuuid/4be974b9-519d-4381-bb1b-463cb721907d">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/0201eef9-6f15-42cc-b65d-997c4bb329d3"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:353e7c75-19dd-4b00-82c6-b45e35356843" outputs="mmuuid/79fd756a-0ceb-4b72-bc09-5ef9bfa90518">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/5c0c199b-08c0-4d2d-bf24-4086d8dbad3c"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:1db631bb-f13b-4f4d-b1cd-93d11cfc28b8" outputs="mmuuid/a6e64d83-fb82-4425-a823-b13e6df6c7fc">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/4697c36f-5975-4815-91da-c37dd908d347"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:df2b8600-cf77-4b73-bc44-f79e506862a6" outputs="mmuuid/4eb29b4e-2d81-4117-aaa4-62133a574afe">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/dfcaab04-c571-4e91-a500-148f39b04f35"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:4e971647-326f-442e-a586-baf25c6cb4a0" outputs="mmuuid/792253a8-2c2e-4330-832e-25b4ccdc2773">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/b8e4bc4b-d04a-42f8-9ed3-7dadd9ed6599"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:71644efd-00db-46c5-978a-b8eb8b5e1cec" outputs="mmuuid/f00c17f4-8410-40c4-8e5a-e9a6ca4afdd5">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/f1103a9d-4e78-4ca3-bf46-51c3f703f2e9"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:7df203bc-5042-4edd-9e6e-4cfcd4aae382" outputs="mmuuid/171498a3-6942-4722-97e1-ce294fc6d945">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/a025b990-9d36-4c6a-bc90-1c449f85d97c"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:e2661672-0823-4f72-9395-4652f7033e9c" outputs="mmuuid/84e74331-5f50-48d1-8159-9d4e7afbf775">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/118beb1c-dc80-4c50-873d-3e65da7c18bc"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f2cffabf-c9c4-4978-98a7-edb84d34d941" outputs="mmuuid/f8cf6c62-2f6d-41a6-bdc1-9a576a35f472">
+        <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/c8ee5815-e329-49fa-9209-e8db37668521"/>
+      </nested>
+      <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/4aab19fe-0fc5-4011-ac26-ca971145d785"/>
+      <inputs href="../DataSources/AF_Transactions.xmi#mmuuid/1b8fb97b-429f-4952-93bf-bf440434354c"/>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:6f698be1-ec6b-4435-9ea3-c560f39a3910"/>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:994c99e7-10e0-44b1-9dbb-5b273471f3f2">
+    <diagram xmi:uuid="mmuuid:bb3e3fb3-0f0f-4039-ac02-67a0bfa15ddd" type="packageDiagramType" target="mmuuid/375e5b81-385b-42b2-a525-ab2676f18e58">
+      <diagramEntity xmi:uuid="mmuuid:6198ee97-65cd-4642-b87b-6b3cda64991f" modelObject="mmuuid/585ee209-ed3b-46f6-8c98-8ce6d7bd9cea" xPosition="10" yPosition="10"/>
+    </diagram>
+  </diagram:DiagramContainer>
+</xmi:XMI>

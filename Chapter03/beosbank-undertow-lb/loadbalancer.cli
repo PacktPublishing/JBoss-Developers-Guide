@@ -1,0 +1,6 @@
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=node1/:add(host=localhost,port=7071)
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=node2/:add(host=localhost,port=7072)
+/subsystem=undertow/configuration=handler/reverse-proxy=beosbank-rproxy-handler:add()
+/subsystem=undertow/configuration=handler/reverse-proxy=beosbank-rproxy-handler/host=lb1:add(outbound-socket-binding=node1,scheme=http,path=/beosbank-undertow-service)
+/subsystem=undertow/configuration=handler/reverse-proxy=beosbank-rproxy-handler/host=lb2:add(outbound-socket-binding=node2,scheme=http,path=/beosbank-undertow-service)
+/subsystem=undertow/server=default-server/host=default-host/location=\/mcs01:add(handler=beosbank-rproxy-handler)

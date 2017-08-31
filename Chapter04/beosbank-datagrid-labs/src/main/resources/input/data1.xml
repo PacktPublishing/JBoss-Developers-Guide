@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MoneyTransferStream>
+<moneytransfer>
+<id>1</id>
+  <amountExcludingFees>100</amountExcludingFees>
+  <amountExcludingFeesInReceiverCurrency/>
+  <amountIncludingFees/>
+  <creditCardNumber>1111-2222-3333-4444</creditCardNumber>
+  <fees/>
+  <keyCode/>
+  <receiver>
+    <address>
+      <city/>
+      <country>Cameroon</country>
+      <street/>
+      <zipcode/>
+    </address>
+    <birthDate/>
+    <firstName>Orphelinat</firstName>
+    <id>1</id>
+    <lastName>1234</lastName>
+  </receiver>
+  <receiverCurrencyCode>XAF</receiverCurrencyCode>
+  <sender>
+    <address>
+      <city/>
+      <country>France</country>
+      <street/>
+      <zipcode/>
+    </address>
+    <birthDate/>
+    <firstName>Association </firstName>
+    <id>2</id>
+    <lastName>URSO</lastName>
+  </sender>
+  <senderCurrencyCode>EUR</senderCurrencyCode>
+  <sendingDate>2017-04-11</sendingDate>
+  <status>DRAFT</status>
+  <totalAmountExcludingVat/>
+  <totalAmountIncludingVat/>
+  <vatRate/>
+  <withdrawalDate/>
+</moneytransfer>
+
+<moneytransfer>
+  <amountExcludingFees/>
+  <amountExcludingFeesInReceiverCurrency/>
+  <amountIncludingFees/>
+  <creditCardNumber>1111-2222-3333-4444</creditCardNumber>
+  <fees/>
+  <id>3</id>
+  <keyCode/>
+  <receiver>
+    <address>
+      <city/>
+      <country>Cameroon</country>
+      <street/>
+      <zipcode/>
+    </address>
+    <birthDate/>
+    <firstName>Baba</firstName>
+    <id>4</id>
+    <lastName>Ahmadou</lastName>
+  </receiver>
+  <receiverCurrencyCode/>
+  <sender>
+    <address>
+      <city/>
+      <country>USA</country>
+      <street/>
+      <zipcode/>
+    </address>
+    <birthDate/>
+    <firstName>John</firstName>
+    <id>5</id>
+    <lastName>Doe</lastName>
+  </sender>
+  <senderCurrencyCode>USD</senderCurrencyCode>
+  <sendingDate>2017-04-11</sendingDate>
+  <status>DRAFT</status>
+  <totalAmountExcludingVat/>
+  <totalAmountIncludingVat/>
+  <vatRate/>
+  <withdrawalDate/>
+</moneytransfer>
+</MoneyTransferStream>

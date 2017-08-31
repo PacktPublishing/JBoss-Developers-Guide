@@ -1,0 +1,18 @@
+<infinispan>
+   <cache-container default-cache="local">
+      <transport cluster="beosbank-cluster"/>
+      <security>
+		<authorization>
+			<identity-role-mapper/>
+			<role name="moneytransfert_writer" permissions="READ WRITE BULK_READ BULK_WRITE" />
+			<role name="moneytransfert_reader" permissions="READ BULK_READ" />
+			<role name="moneytransfert_admin"  permissions="ALL" />
+		</authorization>
+	</security>
+      <distributed-cache name="beosbank-dist" mode="SYNC">
+      	<security>
+			<authorization roles="moneytransfert_writer moneytransfert_reader moneytransfert_admin" /> 
+		</security>
+      </distributed-cache>
+   </cache-container>
+</infinispan>

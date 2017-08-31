@@ -1,0 +1,18 @@
+/profile=ha/subsystem=security/security-domain=beosbank-web-policy-custom:add
+/profile=ha/subsystem=security/security-domain=beosbank-web-policy-custom/authentication=classic:add(\
+login-modules=[\
+ 	{\
+		"module" => "com.beosbank.jbdevg.jbossas.jaas",\
+		"code" => "com.beosbank.jbdevg.jbossas.jaas.BeosBankLoginModule",\
+		"flag" => "required",\
+		"module-options" => [ \
+			("dsJndiName"=>"java:jboss/datasources/MoneyTransferDS"),\
+			("principalsQuery"=>"SELECT PASSWORD FROM T_ACCOUNT WHERE USERNAME=?"),\
+			("rolesQuery"=> "SELECT ROLE, 'Roles'  FROM T_ACCOUNT WHERE USERNAME=?")\
+		]\
+
+	}\
+
+	]\
+)
+:reload-servers

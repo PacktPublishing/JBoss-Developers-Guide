@@ -1,0 +1,20 @@
+package com.beosbank.jbdevg.brms;
+
+import java.math.BigDecimal;
+
+rule "Apply Discount Codes"
+when 
+    $mt: MoneyTransfert( discountCode != null)
+    $promo: Promotion (  code == $mt.getDiscountCode() && beginDate <= $mt.getTrxDate() && $mt.getTrxDate() <= endDate)
+    
+then 
+    //update the mt data
+    $mt.setDiscountRate( $promo.getRate());
+    $mt.setAmountWithDiscount($mt.getAmountWithoutTaxes().multiply(new BigDecimal(1.0).subtract($promo.getRate())));
+    System.out.println("MoneyTransfert  "+ $mt.getReference() +" feesAmount="+$mt.getAmountWithoutTaxes()+"  priceAfterDiscount="+$mt.getAmountWithDiscount());
+    
+    //Create a promotionFeeItem Fact
+    PromotionFeesItem promoFeesGranted = new PromotionFeesItem($promo, $mt);
+    insertLogical(promoFeesGranted);
+
+end;

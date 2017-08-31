@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+    xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
+    xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf"
+    xmlns:cxf-core="http://cxf.apache.org/blueprint/core"
+    xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd    http://cxf.apache.org/blueprint/jaxrs http://cxf.apache.org/schema/blueprint/jaxrs.xsd     http://cxf.apache.org/blueprint/core http://cxf.apache.org/schema/blueprint/core.xsd     http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+    <!-- OSGI blueprint property placeholder -->
+    <cm:property-placeholder id="beosbank.placeholder"
+        persistent-id="com.beosbank.esb.fileprocessor.env.cfg" update-strategy="reload">
+        <cm:default-properties>
+            <cm:property name="activemq.name.usVat" value="QUEUE.VAT.USA"/>
+            <cm:property name="activemq.name.euVat" value="QUEUE.VAT.EU"/>
+        </cm:default-properties>
+    </cm:property-placeholder>
+    <camelContext id="beosbank-file-processor" xmlns="http://camel.apache.org/schema/blueprint">
+        <dataFormats>
+            <beanio id="inputBeanio"
+                mapping="com/beosbank/beanio/mapping.xml" streamName="MoneyTransferStream"/>
+        </dataFormats>
+        <route id="file-route">
+            <from id="_from1" uri="file:work/input"/>
+            <setHeader headerName="beosbank.fromCountry" id="_setHeader1">
+                <xpath>/MoneyTransferStream/moneytransfer/sender/address/country/text()</xpath>
+            </setHeader>
+            <setHeader headerName="beosbank.destinationCountry" id="_setHeader2">
+                <xpath>/MoneyTransferStream/moneytransfer/receiver/address/country/text()</xpath>
+            </setHeader>
+            <log id="_log1" message="Receiving MoneyTransfert ${file:name}  beosbank.destinationCountry=${header.beosbank.destinationCountry}"/>
+            <choice id="_choice1">
+                <when id="_when1">
+                    <simple>
+                    ${header.beosbank.fromCountry} == 'USA' and
+                     ${header.beosbank.destinationCountry} == 'Cameroon'
+                    </simple>
+                    <log id="_log2" message="Money Transfert from  ${header.beosbank.fromCountry} to  ${header.beosbank.destinationCountry} ${file:name} "/>
+                    <to id="_toUsaQueue" uri="activemq:queue:{{activemq.name.usVat}}"/>
+                    <unmarshal id="_unmarshal1" ref="inputBeanio"/>
+                    <to id="_toPdfEngine" uri="pdf:create?textProcessingFactory=autoFormatting"/>
+                    <to id="_toOutFolder" uri="file:work/output"/>
+                </when>
+                <otherwise id="_otherwise1">
+                    <log id="_log4" message="Money Transfert to Other( ${header.beosbank.destinationCountry} )   ${file:name} "/>
+                </otherwise>
+            </choice>
+            <log id="_log5" message="Done processing ${file:name} "/>
+        </route>
+    </camelContext>
+    <!-- AMQ -->
+    <bean class="org.apache.activemq.camel.component.ActiveMQComponent" id="activemq">
+        <property name="brokerURL" value="${brokerURL}"/>
+        <property name="userName" value="${userName}"/>
+        <property name="password" value="${password}"/>
+    </bean>
+</blueprint>

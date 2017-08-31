@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MoneyTransferStream>
+<moneytransfer>
+  <amountExcludingFees>1000</amountExcludingFees>
+  <amountExcludingFeesInReceiverCurrency/>
+  <amountIncludingFees/>
+  <creditCardNumber>5555-5555-5555-5555</creditCardNumber>
+  <fees/>
+  <id>5</id>
+  <keyCode/>
+  <receiver>
+    <address>
+      <city/>
+      <country>Cameroon</country>
+      <street/>
+      <zipcode/>
+    </address>
+    <birthDate/>
+    <firstName>Baba</firstName>
+    <id>8</id>
+    <lastName>Ahmadou</lastName>
+  </receiver>
+  <receiverCurrencyCode/>
+  <sender>
+    <address>
+      <city/>
+      <country>USA</country>
+      <street/>
+      <zipcode/>
+    </address>
+    <birthDate/>
+    <firstName>John</firstName>
+    <id>9</id>
+    <lastName>Lenon</lastName>
+  </sender>
+  <senderCurrencyCode>USD</senderCurrencyCode>
+  <sendingDate>2017-04-11</sendingDate>
+  <status>DRAFT</status>
+  <totalAmountExcludingVat/>
+  <totalAmountIncludingVat/>
+  <vatRate/>
+  <withdrawalDate/>
+</moneytransfer>
+</MoneyTransferStream>
